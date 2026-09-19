@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A continuously updated feed of high-signal AI model, product, and local inference news." />
+  <title>AI Intelligence Feed</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">DAILY AI INTELLIGENCE</p>
+      <h1>AI Intelligence Feed</h1>
+      <p class="subtitle">Verified updates on OpenAI, Claude, Gemini, open models, and local inference.</p>
+    </div>
+    <div class="status"><span class="dot"></span><span id="updated">Loading feed…</span></div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="News filters">
+      <input id="search" type="search" placeholder="Search models, companies, tools…" />
+      <div class="chips" id="categoryChips">
+        <button class="chip active" data-category="All">All</button>
+        <button class="chip" data-category="OpenAI">OpenAI</button>
+        <button class="chip" data-category="Anthropic">Claude</button>
+        <button class="chip" data-category="Google">Gemini</button>
+        <button class="chip" data-category="Open Models">Open models</button>
+        <button class="chip" data-category="Runtime">Runtime</button>
+        <button class="chip" data-category="Agents">Agents</button>
+        <button class="chip" data-category="Multimodal">Multimodal</button>
+      </div>
+      <label class="toggle">
+        <input id="smallOnly" type="checkbox" />
+        <span>≤12B models only</span>
+      </label>
+    </section>
+
+    <section id="feed" class="feed" aria-live="polite"></section>
+    <div id="sentinel" class="sentinel" aria-hidden="true"></div>
+    <p id="empty" class="empty" hidden>No matching news yet.</p>
+  </main>
+
+  <footer>
+    <p>Primary sources first. YouTube and community posts are discovery signals, not final evidence.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
