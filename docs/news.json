@@ -1,5 +1,36 @@
 [
   {
+    "id": "2026-09-20-qwen-image-2-1",
+    "published_at": "2026-09-20",
+    "company": "Alibaba / Qwen",
+    "category": "Multimodal",
+    "title": "Qwen-Image-2.1 unifies local image generation, editing and native transparency",
+    "summary": "Qwen released downloadable Qwen-Image-2.1 weights with a 7B visual diffusion transformer, native 2K RGBA transparency, generation and editing in one model, and support for up to 10 reference images. Day-one integrations include Diffusers, ComfyUI and vLLM-Omni. Despite the 7B headline, the full pipeline also uses an 8B Qwen3-VL text/vision encoder, so it should not be counted as a <=12B total-parameter model. The weights are restricted to non-commercial research/evaluation unless a separate commercial license is obtained.",
+    "model_name": "Qwen-Image-2.1",
+    "model_type": "Image generation and editing diffusion transformer",
+    "input_output": "Text + Images → Image / RGBA Image",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Local GPU inference is supported. The 7B visual transformer is only part of the pipeline; an 8B Qwen3-VL encoder and VAE add memory requirements. Qwen documents CPU offload for limited VRAM, while community quantized builds target consumer GPUs.",
+    "best_use_cases": "Local image generation, transparent assets, product/person reference editing, multi-reference composition and design workflows",
+    "worth_testing": "Yes for local image workflows, especially transparency and reference editing; do not use vendor benchmark claims as established quality, and check the research-only license before commercial use.",
+    "importance": "Important",
+    "confidence": "High for release, architecture, features, local availability and license; comparative image-quality claims are vendor-reported and not independently established.",
+    "tags": ["Qwen", "Image", "Local", "Open Weights", "RGBA", "ComfyUI", "vLLM-Omni"],
+    "sources": [
+      {
+        "name": "Qwen official GitHub repository",
+        "url": "https://github.com/QwenLM/Qwen-Image-2.1"
+      },
+      {
+        "name": "Qwen Research License",
+        "url": "https://github.com/QwenLM/Qwen-Image-2.1/blob/main/LICENSE"
+      }
+    ],
+    "discovered_via": "Web/model-release discovery; verified against Qwen's official repository and license"
+  },
+  {
     "id": "2026-09-19-qwen3-8-livetranslate",
     "published_at": "2026-09-19",
     "company": "Alibaba / Qwen",
