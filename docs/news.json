@@ -1,5 +1,36 @@
 [
   {
+    "id": "2026-09-21-grok-4-7",
+    "published_at": "2026-09-21",
+    "company": "SpaceXAI / xAI",
+    "category": "Frontier Models",
+    "title": "Grok 4.7 targets longer coding and knowledge-work tasks",
+    "summary": "SpaceXAI released Grok 4.7 for coding, agentic tasks and knowledge work. The API model has a 500K context window, accepts text and images, supports four reasoning-effort levels, and starts at $2 per million input tokens and $6 per million output tokens below 200K prompt tokens. The company says it uses a larger base model and longer reinforcement-learning training than Grok 4.6; parameter count is undisclosed.",
+    "model_name": "Grok 4.7",
+    "model_type": "Frontier reasoning and coding model",
+    "input_output": "Text + Image → Text",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted API/cloud model; no local weights or self-hosting path announced in the release.",
+    "best_use_cases": "Long-running coding, agentic software work, professional knowledge tasks and document/presentation creation",
+    "worth_testing": "Yes if you use coding agents or long-horizon knowledge workflows; compare on your own repository-level tasks rather than relying on vendor benchmarks.",
+    "importance": "Important",
+    "confidence": "High for release, API availability, context and pricing from primary sources; comparative performance and safety claims are vendor-reported and need independent validation.",
+    "tags": ["Grok", "Coding", "Agents", "Reasoning", "500K Context", "Cloud"],
+    "sources": [
+      {
+        "name": "SpaceXAI Grok 4.7 announcement",
+        "url": "https://x.ai/news/grok-4-7"
+      },
+      {
+        "name": "SpaceXAI API release notes",
+        "url": "https://docs.x.ai/developers/release-notes"
+      }
+    ],
+    "discovered_via": "Web/model-release discovery; verified against SpaceXAI primary announcement and API release notes"
+  },
+  {
     "id": "2026-09-20-qwen-image-2-1",
     "published_at": "2026-09-20",
     "company": "Alibaba / Qwen",
@@ -18,16 +49,7 @@
     "importance": "Important",
     "confidence": "High for release, architecture, features, local availability and license; comparative image-quality claims are vendor-reported and not independently established.",
     "tags": ["Qwen", "Image", "Local", "Open Weights", "RGBA", "ComfyUI", "vLLM-Omni"],
-    "sources": [
-      {
-        "name": "Qwen official GitHub repository",
-        "url": "https://github.com/QwenLM/Qwen-Image-2.1"
-      },
-      {
-        "name": "Qwen Research License",
-        "url": "https://github.com/QwenLM/Qwen-Image-2.1/blob/main/LICENSE"
-      }
-    ],
+    "sources": [{"name":"Qwen official GitHub repository","url":"https://github.com/QwenLM/Qwen-Image-2.1"},{"name":"Qwen Research License","url":"https://github.com/QwenLM/Qwen-Image-2.1/blob/main/LICENSE"}],
     "discovered_via": "Web/model-release discovery; verified against Qwen's official repository and license"
   },
   {
@@ -49,12 +71,7 @@
     "importance": "Worth Testing",
     "confidence": "High for availability and documented capabilities; comparative quality/latency claims need independent testing.",
     "tags": ["Qwen", "Multimodal", "Audio", "Translation", "Cloud"],
-    "sources": [
-      {
-        "name": "Alibaba Cloud model documentation",
-        "url": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-livetranslate-flash-realtime"
-      }
-    ],
+    "sources": [{"name":"Alibaba Cloud model documentation","url":"https://www.alibabacloud.com/help/en/model-studio/qwen3-8-livetranslate-flash-realtime"}],
     "discovered_via": "Web discovery; verified against Alibaba Cloud primary documentation"
   },
   {
@@ -76,12 +93,7 @@
     "importance": "Worth Testing",
     "confidence": "High for documented capabilities and availability; vendor benchmark comparisons are not treated as independently established.",
     "tags": ["Qwen", "Multimodal", "Audio", "Video", "1M Context", "Cloud"],
-    "sources": [
-      {
-        "name": "Alibaba Cloud model documentation",
-        "url": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash"
-      }
-    ],
+    "sources": [{"name":"Alibaba Cloud model documentation","url":"https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash"}],
     "discovered_via": "Web discovery; verified against Alibaba Cloud primary documentation"
   }
 ]
