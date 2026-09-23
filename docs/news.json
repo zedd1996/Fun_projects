@@ -1,5 +1,49 @@
 [
   {
+    "id": "2026-09-22-claude-opus-5-5",
+    "published_at": "2026-09-22",
+    "company": "Anthropic",
+    "category": "Frontier Models",
+    "title": "Claude Opus 5.5 targets cheaper, longer-running coding and agent work",
+    "summary": "Anthropic released Claude Opus 5.5 across Claude and its API. It costs $4 per million input tokens and $20 per million output tokens, with $0.20 cache reads, and Anthropic says typical workloads cost about 40% less than Opus 5 while output is over 30% faster. The model emphasizes long-horizon coding, agents and professional knowledge work, with external pre-release evaluation alongside Anthropic's own benchmarks.",
+    "model_name": "Claude Opus 5.5",
+    "model_type": "Frontier reasoning, coding and agent model",
+    "input_output": "Multimodal input → Text",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted model available through Claude Platform and major cloud providers; no downloadable weights or local deployment path announced.",
+    "best_use_cases": "Long-running coding agents, codebase migrations and audits, research, business workflows and professional knowledge work",
+    "worth_testing": "Yes for coding and agent workloads, especially if Opus 5 cost or token usage was a constraint; compare on your own long-running tasks and measure interventions, tokens and total cost.",
+    "importance": "Important",
+    "confidence": "High for release, availability and pricing from Anthropic; many comparative performance claims are Anthropic-run or early-access evaluations and should be validated on real workloads.",
+    "tags": ["Claude", "Anthropic", "Coding", "Agents", "Reasoning", "Cloud"],
+    "sources": [{"name":"Anthropic Claude Opus 5.5 announcement","url":"https://www.anthropic.com/claude-opus-5-5"}],
+    "discovered_via": "Primary-source monitoring; verified against Anthropic's official announcement"
+  },
+  {
+    "id": "2026-09-22-vllm-0-30-0",
+    "published_at": "2026-09-22",
+    "company": "vLLM Project",
+    "category": "Runtime",
+    "title": "vLLM 0.30.0 adds Fast Start, new model support and broader quantization",
+    "summary": "vLLM 0.30.0 landed with a persistent GPU weight-cache Fast Start path, support for models including DeepSeek-V4.1-Flash, GLM-5.3-Flash and K2-Horizon, HiSparse host-resident KV-cache tiering, expanded 2/3/5/6/7-bit AutoRound quantization support, and substantial serving/performance work. It is a meaningful server-runtime update rather than a new model release.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Supports CUDA, ROCm, CPU and Intel XPU builds. The biggest performance features target production GPU serving; benefits vary substantially by model and accelerator.",
+    "best_use_cases": "Self-hosted high-throughput inference, production model serving, faster engine restarts, large-model KV-cache pressure and new-model deployment",
+    "worth_testing": "Yes if you operate vLLM or need support for one of the newly added model families; otherwise review breaking changes before upgrading a stable production server.",
+    "importance": "Worth Testing",
+    "confidence": "High; details come from the official vLLM 0.30.0 release notes.",
+    "tags": ["vLLM", "Runtime", "Serving", "Quantization", "Local", "Inference"],
+    "sources": [{"name":"vLLM v0.30.0 release notes","url":"https://github.com/vllm-project/vllm/releases/tag/v0.30.0"}],
+    "discovered_via": "Runtime release monitoring; verified against the official vLLM GitHub release"
+  },
+  {
     "id": "2026-09-21-grok-4-7",
     "published_at": "2026-09-21",
     "company": "SpaceXAI / xAI",
@@ -18,16 +62,7 @@
     "importance": "Important",
     "confidence": "High for release, API availability, context and pricing from primary sources; comparative performance and safety claims are vendor-reported and need independent validation.",
     "tags": ["Grok", "Coding", "Agents", "Reasoning", "500K Context", "Cloud"],
-    "sources": [
-      {
-        "name": "SpaceXAI Grok 4.7 announcement",
-        "url": "https://x.ai/news/grok-4-7"
-      },
-      {
-        "name": "SpaceXAI API release notes",
-        "url": "https://docs.x.ai/developers/release-notes"
-      }
-    ],
+    "sources": [{"name":"SpaceXAI Grok 4.7 announcement","url":"https://x.ai/news/grok-4-7"},{"name":"SpaceXAI API release notes","url":"https://docs.x.ai/developers/release-notes"}],
     "discovered_via": "Web/model-release discovery; verified against SpaceXAI primary announcement and API release notes"
   },
   {
