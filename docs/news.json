@@ -75,6 +75,47 @@
     "discovered_via": "OpenAI official research publication dated October 23, 2026"
   },
   {
+    "id": "2026-10-23-moonshot-kimi-k3-1-pro",
+    "published_at": "2026-10-23",
+    "company": "Moonshot AI",
+    "category": "Frontier Models",
+    "title": "Moonshot launches Kimi K3.1 Pro and Highspeed for long-horizon agents",
+    "summary": "Kimi K3.1 Pro is a post-trained, roughly 3T-class Kimi K3 successor with a 1M-token context and improved coding, 3D creation and financial research. The 2–3× faster Highspeed option and hosted API are live; downloadable weights are promised by November 4, not yet available.",
+    "model_name": "Kimi K3.1 Pro / Kimi K3.1 Pro Highspeed",
+    "model_type": "Large multimodal reasoning and agent model (Kimi K3 post-train)",
+    "input_output": "Text, images and supported multimodal inputs → Text and tool actions",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Currently hosted via Kimi, Kimi Code/Work and API; no downloadable K3.1 Pro weights as of October 25. About 3T-class total capacity implies datacenter-scale multi-accelerator hardware when weights arrive; precise parameters and local requirements not yet published.",
+    "best_use_cases": "Long-running coding agents, repository tasks, 3D/CAD generation, financial document analysis and complex research",
+    "worth_testing": "Yes through the hosted API, comparing task completion, cost, latency and intervention rate against current coding/agent models.",
+    "importance": "Important",
+    "confidence": "High on launch, current hosted availability and announced weight-release date; model size is only specified as 3T-class and benchmark advantages are vendor-reported.",
+    "tags": [
+      "Moonshot AI",
+      "Kimi",
+      "K3.1 Pro",
+      "Frontier",
+      "Agents",
+      "Coding",
+      "3D",
+      "Hosted",
+      "Future Open Weights"
+    ],
+    "sources": [
+      {
+        "name": "Moonshot Kimi K3.1 Pro technical announcement",
+        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      },
+      {
+        "name": "Kimi Code official release notes",
+        "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+      }
+    ],
+    "discovered_via": "Official Moonshot/Kimi announcement and release notes; October 23 catch-up discovery"
+  },
+  {
     "id": "2026-10-22-ollama-0-40-9-speech-decisions",
     "published_at": "2026-10-22",
     "company": "Ollama",
@@ -117,6 +158,82 @@
       }
     ],
     "discovered_via": "Ollama official release notes and documentation; catch-up from October 22"
+  },
+  {
+    "id": "2026-10-22-openai-decisions-api-general-availability",
+    "published_at": "2026-10-22",
+    "company": "OpenAI",
+    "category": "API & Developer Tools",
+    "title": "OpenAI Decisions API reaches general availability with caching and 400-question requests",
+    "summary": "The GPT-6 Luna-powered Decisions API exits beta for structured probability, choice and score decisions. GA adds prompt caching, native JSON inputs, images in question instructions, GPT-Live integration and up to 400 questions/request. Standard input is $0.10 per million tokens; cached input $0.01, with no output-token charge.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted OpenAI API; no local GPU or downloadable model. Network access and API credentials required.",
+    "best_use_cases": "Fast classification, customer-support routing, document triage, agent guard decisions, risk scoring and live voice reactions",
+    "worth_testing": "Yes for high-volume structured decisions. Benchmark accuracy, calibration, p95 latency and total cost against your current Responses API classifier.",
+    "importance": "Important",
+    "confidence": "High for GA date, features and prices from OpenAI; up-to-10× speed and customer performance improvements are vendor/customer-reported and workload-dependent.",
+    "tags": [
+      "OpenAI",
+      "Decisions API",
+      "GPT-6 Luna",
+      "API",
+      "Classification",
+      "Scoring",
+      "Voice Agents",
+      "Cloud"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI Decisions API general availability announcement",
+        "url": "https://openai.com/index/decisions-api/"
+      },
+      {
+        "name": "OpenAI API changelog",
+        "url": "https://developers.openai.com/api/docs/changelog"
+      }
+    ],
+    "discovered_via": "OpenAI official announcement and changelog; October 22 catch-up release"
+  },
+  {
+    "id": "2026-10-22-canva-craft-image-model",
+    "published_at": "2026-10-22",
+    "company": "Canva",
+    "category": "Image Generation",
+    "title": "Canva launches Craft image-generation model for editable design assets",
+    "summary": "Canva released its first in-house image model, Craft, in Dream Lab and a public API. A two-stage composition-planning and rendering system produces up-to-2K images across 30+ aspect ratios and supports text in 55 languages; Magic Layers can turn outputs into editable design elements. Parameter count and weights are undisclosed.",
+    "model_name": "Canva Craft",
+    "model_type": "Two-stage design-oriented image generation model",
+    "input_output": "Text prompt → Image (up to 2K)",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Canva-hosted inference via Dream Lab and public API; no released local model weights or client GPU requirement.",
+    "best_use_cases": "Marketing visuals, social posts, posters, typography-heavy designs, product images and editable creative assets",
+    "worth_testing": "Yes if producing editable marketing graphics. Compare typography, layout fidelity, layer editability and API cost on real briefs.",
+    "importance": "Worth Testing",
+    "confidence": "High on release, availability and features from Canva; comparative DesignArena and internal quality claims need task-specific independent confirmation.",
+    "tags": [
+      "Canva",
+      "Craft",
+      "Image Generation",
+      "Design",
+      "2K",
+      "API",
+      "Typography",
+      "Cloud"
+    ],
+    "sources": [
+      {
+        "name": "Canva official Craft announcement",
+        "url": "https://www.canva.com/newsroom/news/canva-craft/"
+      }
+    ],
+    "discovered_via": "Canva newsroom official October 22 announcement; catch-up discovery"
   },
   {
     "id": "2026-09-24-gpt-6-sol-luna",
