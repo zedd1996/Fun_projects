@@ -1,5 +1,42 @@
 [
   {
+    "id": "2026-10-25-llamacpp-b11888-grammar-sampling-fix",
+    "published_at": "2026-10-25",
+    "company": "llama.cpp / ggml-org",
+    "category": "Runtime",
+    "title": "llama.cpp b11888 fixes long-token grammar rejection and strengthens parser safety",
+    "summary": "The October 25 development build replaces recursive grammar-candidate checking with an iterative implementation, fixing rejection of tokens 256+ characters long in constrained generation. It improves structured-output compatibility for GLM-4.7-Flash, Laguna-S-2.1, Qwen3.6 and Gemma 4; this is a pre-release build, not a broad speed upgrade.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Runs on supported llama.cpp CPU/GPU backends (Apple Silicon, CUDA, ROCm, Vulkan and others). Memory needs depend on the chosen model; the grammar fix itself does not require extra model memory.",
+    "best_use_cases": "Reliable JSON/schema-constrained generation, tool-call formatting and long-token vocabulary compatibility in local models",
+    "worth_testing": "Yes if grammar-constrained output fails or stalls on long whitespace tokens. Validate against existing schema tests before using this development build in production.",
+    "importance": "Worth Testing",
+    "confidence": "High on the specific bug and patch from the official release notes; performance improvements are implementation-specific and not independently benchmarked.",
+    "tags": [
+      "llama.cpp",
+      "Runtime",
+      "Local",
+      "Grammar",
+      "Structured Outputs",
+      "JSON",
+      "Pre-release",
+      "GLM",
+      "Qwen"
+    ],
+    "sources": [
+      {
+        "name": "llama.cpp b11888 official release notes",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11888"
+      }
+    ],
+    "discovered_via": "Official ggml-org October 25 release notes; verified long-token grammar bug and fix"
+  },
+  {
     "id": "2026-10-23-nvidia-nemotron-3-5-bolt-e4b",
     "published_at": "2026-10-23",
     "company": "NVIDIA",
@@ -114,6 +151,47 @@
       }
     ],
     "discovered_via": "Official Moonshot/Kimi announcement and release notes; October 23 catch-up discovery"
+  },
+  {
+    "id": "2026-10-23-block-dessa-speech-research-preview",
+    "published_at": "2026-10-23",
+    "company": "Block",
+    "category": "Audio / Research Preview",
+    "title": "Block unveils Dessa, a speech-only full-duplex voice model claimed to run on a MacBook",
+    "summary": "Block demonstrated Dessa, a speech-to-speech model trained from recorded conversations without text or pretrained LLMs. It can listen and talk simultaneously and is claimed to run faster than real time on a MacBook Pro M4 Max or better. No public weights, API, parameter count, independent benchmarks or release date for general access are available.",
+    "model_name": "Dessa",
+    "model_type": "Speech-only full-duplex speech-to-speech conversational model",
+    "input_output": "Streaming speech/audio → Streaming speech/audio",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Block claims local inference on a MacBook Pro M4 Max or better; RAM/VRAM, runtime, download size and model parameters are undisclosed. This is a future capability, not a downloadable local model today.",
+    "best_use_cases": "Natural low-latency voice agents, interruption-aware conversation, expressive speech interfaces and on-device assistants once access is released",
+    "worth_testing": "Not publicly testable yet. Monitor official availability and independent latency, interruption-handling and safety evaluations; early access is limited to selected safety researchers.",
+    "importance": "Important",
+    "confidence": "High that Block announced and demonstrated the research preview; low-to-medium on real-world voice quality and hardware performance, which are currently vendor claims.",
+    "tags": [
+      "Block",
+      "Dessa",
+      "Audio",
+      "Speech-to-Speech",
+      "Full Duplex",
+      "On-device",
+      "MacBook",
+      "Research Preview",
+      "Not Released"
+    ],
+    "sources": [
+      {
+        "name": "Block Dessa official research page",
+        "url": "https://block.xyz/dessa"
+      },
+      {
+        "name": "Block official company announcement on LinkedIn",
+        "url": "https://www.linkedin.com/company/joinblock/"
+      }
+    ],
+    "discovered_via": "Julian Goldie SEO October 24 Dessa video; independently checked against Block's official announcement and research page; secondary reports used only for context"
   },
   {
     "id": "2026-10-22-ollama-0-40-9-speech-decisions",
@@ -234,6 +312,121 @@
       }
     ],
     "discovered_via": "Canva newsroom official October 22 announcement; catch-up discovery"
+  },
+  {
+    "id": "2026-10-22-llamaindex-ocria-1-4b-document-parsing",
+    "published_at": "2026-10-22",
+    "company": "LlamaIndex",
+    "category": "Document AI",
+    "title": "LlamaIndex introduces OCRia-1, a 4B vision-language document parser",
+    "summary": "OCRia-1 is a 4B vision-language model for extracting tables, charts, formatting and text from document pages, available through LlamaParse. LlamaIndex reports 87.4 overall on ParseBench and strong multilingual table scores; benchmarks are developer-run. Public downloadable weights or self-hosting rights were not verified.",
+    "model_name": "OCRia-1",
+    "model_type": "Vision-language document parsing model",
+    "input_output": "Document page images/PDFs → Structured text, Markdown, HTML, tables and chart data",
+    "total_parameters_b": 4,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted via LlamaParse; no verified public model weights or local deployment instructions. LlamaIndex has not published hardware requirements for self-hosting this specific checkpoint.",
+    "best_use_cases": "Complex PDF parsing, financial statements, insurance documents, multilingual tables, chart extraction and preserving mathematical formatting",
+    "worth_testing": "Yes through LlamaParse for complex documents; compare extraction accuracy and cost against existing OCR/vision parsers on representative pages.",
+    "importance": "Worth Testing",
+    "confidence": "High on the 4B model and product availability from LlamaIndex; medium on October 22 date (catalog listing) and comparative performance; local weights not confirmed.",
+    "tags": [
+      "LlamaIndex",
+      "OCRia-1",
+      "4B",
+      "Document AI",
+      "OCR",
+      "Tables",
+      "Charts",
+      "Vision",
+      "Hosted",
+      "Small Models"
+    ],
+    "sources": [
+      {
+        "name": "LlamaIndex official OCRia-1 announcement",
+        "url": "https://www.llamaindex.ai/blog/parse-ocria-1"
+      }
+    ],
+    "discovered_via": "LlamaIndex official announcement and October 22 service catalog; verified model size and hosted availability"
+  },
+  {
+    "id": "2026-10-21-recursive-flint-39-8b-coding-model",
+    "published_at": "2026-10-21",
+    "company": "Recursive Superintelligence",
+    "category": "Open-Weight Models",
+    "title": "Recursive Flint offers a 39.8B-total MoE coding agent model for local inference",
+    "summary": "Recursive released Flint under Apache 2.0: a 39.8B-total, ~2.5B-active MoE for coding and multi-step tool use, with a documented 262K context. Official GGUF Q4_K_M is 23.4GB; Recursive reports strong coding results and high Mac throughput, but the benchmarks are developer-reported. Not a ≤12B model.",
+    "model_name": "Flint",
+    "model_type": "Mixture-of-experts text coding/agent language model",
+    "input_output": "Text → Text and tool calls",
+    "total_parameters_b": 39.8,
+    "active_parameters_b": 2.5,
+    "local": true,
+    "hardware": "Official BF16 weights ~80GB for server deployment; ggml-org Q4_K_M GGUF ~23.4GB plus KV cache/runtime overhead. High-memory Apple Silicon or 48GB-class GPU/unified memory is a practical starting point for common quantized setups; actual supported configurations vary.",
+    "best_use_cases": "Local coding agents, repository exploration, bug fixing, tests and multi-turn tool use",
+    "worth_testing": "Yes on sufficiently large local hardware; compare code-task success, tokens/s, intervention rate and memory against your current coding model.",
+    "importance": "Worth Testing",
+    "confidence": "High on official model card, total/active counts, license and GGUF availability; speed and benchmark comparisons remain vendor-reported.",
+    "tags": [
+      "Recursive",
+      "Flint",
+      "MoE",
+      "39.8B",
+      "2.5B Active",
+      "Coding",
+      "Local",
+      "GGUF",
+      "Apache 2.0"
+    ],
+    "sources": [
+      {
+        "name": "Recursive Flint official model card",
+        "url": "https://huggingface.co/RecursiveSI/flint"
+      },
+      {
+        "name": "ggml-org official Flint GGUF",
+        "url": "https://huggingface.co/ggml-org/Flint-GGUF"
+      }
+    ],
+    "discovered_via": "Primary model card and official ggml-org conversion; October 21 catch-up discovery"
+  },
+  {
+    "id": "2026-10-15-conway-underdog-bark-3-0",
+    "published_at": "2026-10-15",
+    "company": "Conway Research / Underdog",
+    "category": "Small Open-Weight Models",
+    "title": "Underdog Bark 3.0 packs English speech recognition into a 163MB download",
+    "summary": "Bark 3.0 is a 0.6B-parameter English speech-to-text model derived from NVIDIA Parakeet, compressed to a 163MB distribution for local use. The maker reports 4.94% mean WER across seven English ASR datasets and fast Apple Silicon inference. Download size is not runtime RAM; the October 21 publicity followed a model repository created October 15.",
+    "model_name": "Underdog Bark 3.0",
+    "model_type": "English automatic speech recognition (ASR) model",
+    "input_output": "Recorded speech/audio → Text transcript",
+    "total_parameters_b": 0.6,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "163MB packed download; expands in RAM and needs additional audio buffers. Documented Apple Silicon MLX/Core ML paths, Windows CUDA and CPU, plus iOS Core ML. Long recordings can exceed 16GB memory unless split into segments.",
+    "best_use_cases": "Offline English dictation, meeting transcription, local voice-assistant ASR and privacy-sensitive speech processing",
+    "worth_testing": "Yes if English offline transcription matters; compare word error rate, proper names, latency and peak RAM against Parakeet and Whisper on your own recordings.",
+    "importance": "Worth Testing",
+    "confidence": "High on publisher model card, 0.6B total size, local weights and 163MB package; medium on claimed benchmark and Mac speed. Repository creation is dated October 15; public announcement followed later.",
+    "tags": [
+      "Underdog",
+      "Bark 3.0",
+      "0.6B",
+      "ASR",
+      "Speech-to-Text",
+      "Local",
+      "Apple Silicon",
+      "Small Models"
+    ],
+    "sources": [
+      {
+        "name": "Conway Research official Underdog Bark 3.0 model card",
+        "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0"
+      }
+    ],
+    "discovered_via": "Official Hugging Face model card and release-history cross-check; October 15 model artifact with later publicity"
   },
   {
     "id": "2026-09-24-gpt-6-sol-luna",
