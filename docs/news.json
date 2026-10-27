@@ -1,5 +1,41 @@
 [
   {
+    "id": "2026-10-26-openai-ai-generated-proofs-external-review",
+    "published_at": "2026-10-26",
+    "company": "OpenAI",
+    "category": "AI Research",
+    "title": "OpenAI publishes AI-generated proofs on local smoothing and the Exponential Time Hypothesis for expert review",
+    "summary": "OpenAI published AI-generated natural-language and Lean-formalized proofs claiming advances in local smoothing/Kakeya and a refutation of the Exponential Time Hypothesis, while announcing external expert review. A separate quantum-field-theory result is being examined before its artifacts are released. These are consequential research claims, not independently settled mathematical results or a new model release.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "No new model or downloadable inference checkpoint; proof artifacts can be inspected with mathematical proof tooling, while the original research used undisclosed internal AI systems.",
+    "best_use_cases": "Formal-methods research, evaluating AI-generated mathematical proofs, complexity theory, AI-assisted scientific discovery and expert verification workflows",
+    "worth_testing": "Worth inspecting if you use Lean or formal verification; do not treat the claimed theorems as independently established until external experts validate assumptions and interpretation.",
+    "importance": "Important",
+    "confidence": "High that OpenAI published proof artifacts and announced external review on October 26; low-to-medium on the far-reaching mathematical interpretations until independent expert examination.",
+    "tags": [
+      "OpenAI",
+      "Research",
+      "Formal Verification",
+      "Lean",
+      "Mathematics",
+      "Complexity Theory",
+      "Scientific Discovery",
+      "External Review"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI research announcement, October 26",
+        "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+      }
+    ],
+    "discovered_via": "Official OpenAI research announcement; primary-source claims carefully distinguished from independent validation"
+  },
+  {
     "id": "2026-10-25-llamacpp-b11888-grammar-sampling-fix",
     "published_at": "2026-10-25",
     "company": "llama.cpp / ggml-org",
@@ -352,6 +388,90 @@
     "discovered_via": "LlamaIndex official announcement and October 22 service catalog; verified model size and hosted availability"
   },
   {
+    "id": "2026-10-22-tencent-wevisone-vl-2b",
+    "published_at": "2026-10-22",
+    "company": "Tencent WeChat Vision",
+    "category": "Small Open-Weight Models",
+    "title": "Tencent releases WeVisOne-VL-2B for local object detection, OCR and image segmentation",
+    "summary": "Tencent published a compact vision-language model combining object detection, counting, pointing, OCR localization, segmentation and image matting. It uses a Qwen3-VL backbone and a separate 9.5M-parameter pixel decoder; the Hugging Face repository reports about 2B total parameters. Open weights, code and demos are available under Apache 2.0; evaluation gains are developer-reported.",
+    "model_name": "WeVisOne-VL-2B",
+    "model_type": "Vision-language model with auxiliary pixel decoder",
+    "input_output": "Images and text prompts → Text, boxes, points, counts, masks and alpha mattes",
+    "total_parameters_b": 2,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "About 4GB for 2B BF16 weights plus vision/runtime and pixel-decoder overhead; an 8–12GB GPU is a reasonable starting point for modest images, not an official minimum. Uses the project's Transformers/vLLM inference package.",
+    "best_use_cases": "Local object detection, OCR grounding, visual counting, referring segmentation, image matting and image-annotation workflows",
+    "worth_testing": "Yes for image understanding pipelines; compare object localization, OCR bounding boxes and mask quality against specialized detectors and segmentation tools.",
+    "importance": "Worth Testing",
+    "confidence": "High on published weights, approximate size, code, license and tasks; medium on October 22 release date and comparative benchmark claims.",
+    "tags": [
+      "Tencent",
+      "WeVisOne",
+      "2B",
+      "Small Models",
+      "Open Weights",
+      "Vision",
+      "OCR",
+      "Segmentation",
+      "Local",
+      "Apache 2.0"
+    ],
+    "sources": [
+      {
+        "name": "Tencent WeVisOne-VL-2B official model card",
+        "url": "https://huggingface.co/tencent/WeVisOne-VL-2B"
+      },
+      {
+        "name": "Tencent WeVisOne-VL source and evaluations",
+        "url": "https://github.com/Tencent/WeVisOne-VL"
+      }
+    ],
+    "discovered_via": "Official Tencent model card and project repository; release date cross-checked against public model listings"
+  },
+  {
+    "id": "2026-10-22-tencent-wevisone-vl-4b",
+    "published_at": "2026-10-22",
+    "company": "Tencent WeChat Vision",
+    "category": "Small Open-Weight Models",
+    "title": "Tencent WeVisOne-VL-4B offers higher-capacity local visual perception",
+    "summary": "The larger WeVisOne checkpoint unifies detection, pointing, counting, OCR, segmentation and matting. Despite its 4B name, Hugging Face reports approximately 5B total parameters, including vision components; a required 9.5M-parameter pixel decoder adds little overhead. Tencent publishes Apache 2.0 weights and an inference package; reported quality gains remain developer-run.",
+    "model_name": "WeVisOne-VL-4B",
+    "model_type": "Vision-language model with auxiliary pixel decoder",
+    "input_output": "Images and text prompts → Text, boxes, points, counts, masks and alpha mattes",
+    "total_parameters_b": 5,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "About 10GB for approximately 5B BF16 weights before image tokens, runtime and pixel decoder; 16–24GB GPU is a sensible initial testing range, not an official requirement. Transformers and the project-specific vLLM backend are documented.",
+    "best_use_cases": "Complex visual grounding, document OCR with positions, object counting, precise segmentation and high-quality alpha matting",
+    "worth_testing": "Yes when image localization and segmentation quality matter; compare with the 2B sibling and specialized OCR/segmentation models on real images.",
+    "importance": "Worth Testing",
+    "confidence": "High on official weights, 5B rounded total reported by Hugging Face, license and tasks; medium on October 22 dating and comparative accuracy.",
+    "tags": [
+      "Tencent",
+      "WeVisOne",
+      "5B Total",
+      "Small Models",
+      "Open Weights",
+      "Vision",
+      "OCR",
+      "Segmentation",
+      "Local",
+      "Apache 2.0"
+    ],
+    "sources": [
+      {
+        "name": "Tencent WeVisOne-VL-4B official model card",
+        "url": "https://huggingface.co/tencent/WeVisOne-VL-4B"
+      },
+      {
+        "name": "Tencent WeVisOne-VL source and evaluations",
+        "url": "https://github.com/Tencent/WeVisOne-VL"
+      }
+    ],
+    "discovered_via": "Official Tencent model card and repository; total parameter count from Hugging Face safetensors metadata rather than 4B branding"
+  },
+  {
     "id": "2026-10-21-recursive-flint-39-8b-coding-model",
     "published_at": "2026-10-21",
     "company": "Recursive Superintelligence",
@@ -391,6 +511,52 @@
       }
     ],
     "discovered_via": "Primary model card and official ggml-org conversion; October 21 catch-up discovery"
+  },
+  {
+    "id": "2026-10-21-baseten-elephant-1-9b-decision-model",
+    "published_at": "2026-10-21",
+    "company": "Base Labs / Baseten",
+    "category": "Small Open-Weight Models",
+    "title": "Base Labs releases elephant-1, a local 9B model for calibrated decisions",
+    "summary": "Base Labs open-sourced elephant-1, a Qwen3.5-9B-based model that returns choice, yes/no and ordinal-score probabilities rather than prose. MIT weights and a CUDA serving recipe are available; Baseten also hosts a System One endpoint. The team reports leading results among sub-15B decision models, with external benchmark results requiring workload-specific confirmation.",
+    "model_name": "elephant-1",
+    "model_type": "Post-trained structured decision/classification model",
+    "input_output": "Text and optional images with typed questions → Choice, yes/no and scoring probabilities",
+    "total_parameters_b": 9,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Approximately 18GB for 9B BF16 weights plus serving/runtime memory; a 24GB-class CUDA GPU is a sensible starting point. The official self-hosting recipe uses a pinned OneJev runtime and CUDA 12.8 container.",
+    "best_use_cases": "Local classification, ticket routing, candidate matching, moderation triage, tool-routing and calibrated risk/urgency scores",
+    "worth_testing": "Yes. Compare with d3:9b and Perplexity Decider Flash on your own labels; measure accuracy, calibration, abstention and latency, not only leaderboard scores.",
+    "importance": "Worth Testing",
+    "confidence": "High on October 21 release, weights, license, size and CUDA recipe; medium on benchmark ranking and calibration claims.",
+    "tags": [
+      "Base Labs",
+      "Baseten",
+      "elephant-1",
+      "9B",
+      "Small Models",
+      "Decision Models",
+      "Classification",
+      "Local",
+      "MIT",
+      "CUDA"
+    ],
+    "sources": [
+      {
+        "name": "Base Labs elephant-1 official model card",
+        "url": "https://huggingface.co/baselabs/elephant-1"
+      },
+      {
+        "name": "Baseten release announcement, October 21",
+        "url": "https://www.baseten.co/blog/the-best-decision-models-in-the-world-mammoth-1-and-elephant-1/"
+      },
+      {
+        "name": "Base Labs technical report",
+        "url": "https://labs.baseten.co/articles/mammoth-1-and-elephant-1-frontier-decision-models"
+      }
+    ],
+    "discovered_via": "Official Baseten announcement, model card and technical report; independent leaderboard references distinguished from vendor evaluation"
   },
   {
     "id": "2026-10-15-conway-underdog-bark-3-0",
