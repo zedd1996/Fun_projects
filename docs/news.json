@@ -1,5 +1,89 @@
 [
   {
+    "id": "2026-10-27-google-deepmind-genie-4-world-simulation",
+    "published_at": "2026-10-27",
+    "company": "Google DeepMind",
+    "category": "World Models",
+    "title": "Google announces Genie 4 with real-time steerable worlds and native audio",
+    "summary": "Genie 4 generates interactive worlds with native ambient audio and dialogue, keyboard navigation, and text-directed scene changes. It uses Gemini-family systems to help preserve coherence. Access is currently limited to trusted research testers; Project Genie and Gemini API/AI Studio access are planned, not generally available.",
+    "model_name": "Genie 4",
+    "model_type": "Interactive multimodal world-simulation model",
+    "input_output": "Text prompts and user navigation controls → Interactive visual simulation and audio",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted research preview; model weights, parameter count, GPU memory requirements and a local deployment path are not published.",
+    "best_use_cases": "Interactive world prototyping, research into agent/robot training simulations, game and film previsualization, dynamic environment exploration",
+    "worth_testing": "Not publicly testable yet. Join the official waitlist if simulation is relevant; evaluate physical consistency and interactive latency rather than treating demonstrations as validated physics.",
+    "importance": "Important",
+    "confidence": "High for the October 27 announcement, capabilities demonstrated and limited access; realism, physical fidelity and broader usability are vendor claims without independent validation.",
+    "tags": [
+      "Google DeepMind",
+      "Genie 4",
+      "World Model",
+      "Simulation",
+      "Interactive",
+      "Audio",
+      "Research Preview",
+      "Hosted"
+    ],
+    "sources": [
+      {
+        "name": "Google DeepMind: Genie 4 announcement, October 27",
+        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      },
+      {
+        "name": "Google AI announcement",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"
+      }
+    ],
+    "discovered_via": "Official Google DeepMind and Google AI announcements; limited rollout independently distinguished from future availability"
+  },
+  {
+    "id": "2026-10-27-anthropic-claude-drug-discovery-wet-lab-results",
+    "published_at": "2026-10-27",
+    "company": "Anthropic",
+    "category": "AI Research / Agents",
+    "title": "Anthropic reports wet-lab drug-discovery results from Claude-assisted research partnerships",
+    "summary": "Anthropic reported Claude-assisted drug discovery and documentation work with six biotech partners. Generate Biomedicines experimentally tested shorter CAR T-cell receptor designs, while BigHat tested antibody variants and Enveda evaluated manufacturing document review. Results are early-stage partner experiments, not approved medicines or a new Claude model.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Existing cloud-hosted Claude and tool-using agent workflows connected to specialist laboratory data and human-operated experiments; no new weights or local inference package.",
+    "best_use_cases": "Scientist-supervised experimental design, protein engineering hypotheses, analysis of lab results, pharmaceutical document review and research workflow coordination",
+    "worth_testing": "Worth examining if you run life-science R&D or regulated document workflows. Require controlled experiments, domain-expert review and independent validation; no clinical efficacy is established.",
+    "importance": "Worth Testing",
+    "confidence": "High that partners conducted and published the reported experiments; results include partner-authored technical reports, but claims about generalizable drug-discovery acceleration are early and not clinically validated.",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Research",
+      "Biotech",
+      "Drug Discovery",
+      "Scientific Agents",
+      "Wet Lab",
+      "Human Oversight"
+    ],
+    "sources": [
+      {
+        "name": "Anthropic: Early progress on accelerating drug development with Claude, October 27",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development"
+      },
+      {
+        "name": "Generate Biomedicines experimental report",
+        "url": "https://generatebiomedicines.com/publications/refactored-intracellular-domains-enhance-car-expression-and-function/"
+      },
+      {
+        "name": "Enveda manufacturing-document study",
+        "url": "https://enveda.com/CMC-Document-Processor/"
+      }
+    ],
+    "discovered_via": "Anthropic primary research report, cross-checked with partner experimental publications"
+  },
+  {
     "id": "2026-10-26-openai-ai-generated-proofs-external-review",
     "published_at": "2026-10-26",
     "company": "OpenAI",
@@ -34,6 +118,50 @@
       }
     ],
     "discovered_via": "Official OpenAI research announcement; primary-source claims carefully distinguished from independent validation"
+  },
+  {
+    "id": "2026-10-26-openai-gpt-6-1-terra",
+    "published_at": "2026-10-26",
+    "company": "OpenAI",
+    "category": "Frontier Models",
+    "title": "OpenAI releases GPT-6.1 Terra for lower-cost visual reasoning and computer-use agents",
+    "summary": "GPT-6.1 Terra is available in ChatGPT Work, Codex and the API, focusing on visual reasoning, computer interaction and writing. Standard pricing is $1/M input, $0.05/M cached input and $5/M output, with a 1.05M-token context. OpenAI reports stronger coding and computer-use results than GPT-5.6 Terra; these are vendor evaluations.",
+    "model_name": "GPT-6.1 Terra",
+    "model_type": "Hosted multimodal reasoning, computer-use and coding model",
+    "input_output": "Text and images → Text, structured output and tool actions (Responses API for tools)",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted in OpenAI API, ChatGPT Work and Codex; no published weights, parameter count or local GPU requirements. Long prompts over 272K input tokens incur higher API rates.",
+    "best_use_cases": "Visual document interpretation, UI automation, form filling, catalog matching, routine coding and high-volume professional agents",
+    "worth_testing": "Yes. Compare against GPT-6.1 Sol and your current model on real screen-based tasks, measuring completion, latency, tool errors and total cost per success.",
+    "importance": "Important",
+    "confidence": "High for October 26 API release date, pricing, context, modalities and availability from OpenAI; comparative benchmarks and cost-per-task claims are vendor-reported.",
+    "tags": [
+      "OpenAI",
+      "GPT-6.1 Terra",
+      "Computer Use",
+      "Vision",
+      "Coding",
+      "Agents",
+      "API",
+      "Hosted"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI: Introducing GPT-6.1 Terra",
+        "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+      },
+      {
+        "name": "OpenAI API changelog, October 26",
+        "url": "https://developers.openai.com/api/docs/changelog"
+      },
+      {
+        "name": "GPT-6.1 Terra official API model reference",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+      }
+    ],
+    "discovered_via": "Official OpenAI release announcement, API changelog and model reference; October 26 release date verified against changelog"
   },
   {
     "id": "2026-10-25-llamacpp-b11888-grammar-sampling-fix",
