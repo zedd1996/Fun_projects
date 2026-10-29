@@ -1,5 +1,159 @@
 [
   {
+    "id": "2026-10-28-google-gemini-4-carbon",
+    "published_at": "2026-10-28",
+    "company": "Google DeepMind",
+    "category": "Foundation Models",
+    "title": "Google announces Gemini 4 Carbon for long-horizon coding and cybersecurity",
+    "summary": "Google announced Gemini 4 Carbon, claiming stronger long-horizon coding and cyberdefense performance, including 88.2% SEC-bench Pro and 71.0% CWE-bench. Initial access is limited to selected cyber defenders; broader API and consumer access is not yet available.",
+    "model_name": "Gemini 4 Carbon",
+    "model_type": "Proprietary frontier multimodal reasoning and agent model",
+    "input_output": "Multimodal prompts and tools → text, code and tool actions",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted restricted preview. No public weights, model parameter count or local deployment path. Announced introductory pricing for future access: $2/M input and $10/M output tokens.",
+    "best_use_cases": "Cyberdefense, code auditing, complex bug fixing, long-running software agents",
+    "worth_testing": "Not broadly testable yet. Eligible security teams can compare verified patch quality and false positives against existing models; do not treat preview benchmark claims as independently proven.",
+    "importance": "Important",
+    "confidence": "High for October 28 announcement and restricted rollout; comparative cyber and safety scores largely Google-reported and need independent replication.",
+    "tags": [
+      "Google",
+      "Gemini 4 Carbon",
+      "Cybersecurity",
+      "Coding",
+      "Frontier",
+      "Restricted Preview"
+    ],
+    "sources": [
+      {
+        "name": "Google: Gemini 4 Carbon announcement, October 28",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+      }
+    ],
+    "discovered_via": "Google official primary announcement"
+  },
+  {
+    "id": "2026-10-28-nvidia-nemotron-3-5-transcribe-30b-a4b",
+    "published_at": "2026-10-28",
+    "company": "NVIDIA",
+    "category": "Audio / Speech",
+    "title": "NVIDIA releases Nemotron 3.5 Transcribe for 40-language contextual and speaker-aware ASR",
+    "summary": "NVIDIA released an open-weight 34B-total/4.3B-active speech model for transcription in 40 languages, translation, speaker labels, word timestamps and audio Q&A. Supports recordings up to one hour; NVIDIA reports leading open-weight ASR results.",
+    "model_name": "NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+    "model_type": "Hybrid Mamba-Transformer mixture-of-experts speech-augmented language model",
+    "input_output": "Audio and text instructions → transcripts, translations, speaker labels, timestamps and text answers",
+    "total_parameters_b": 34,
+    "active_parameters_b": 4.3,
+    "local": true,
+    "hardware": "NVIDIA documents 1× H100 80GB for BF16 serving; FP8, NVFP4 and GGUF checkpoints exist. Large GPU or specialist hardware required, not an ordinary 8–24GB laptop model.",
+    "best_use_cases": "Multilingual meeting transcription, speaker diarization, contextual medical/legal dictation, timestamped media transcripts, speech translation",
+    "worth_testing": "Yes for teams with substantial GPU capacity. Benchmark WER, names, overlapping speakers and actual serving cost against smaller ASR systems. Not a ≤12B model despite 4.3B active.",
+    "importance": "Important",
+    "confidence": "High for official model availability, 34B total and 4.3B active, 40-language scope and documented hardware; benchmark and throughput claims are developer-reported, with some third-party leaderboard corroboration.",
+    "tags": [
+      "NVIDIA",
+      "Nemotron 3.5",
+      "Speech",
+      "ASR",
+      "Diarization",
+      "Translation",
+      "Open Weights",
+      "34B Total",
+      "4.3B Active"
+    ],
+    "sources": [
+      {
+        "name": "NVIDIA official research release, October 28",
+        "url": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/"
+      },
+      {
+        "name": "NVIDIA Hugging Face model card",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+      },
+      {
+        "name": "NVIDIA technical writeup on Hugging Face",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+      }
+    ],
+    "discovered_via": "NVIDIA primary research and model card; independently published leaderboards discussed with caution"
+  },
+  {
+    "id": "2026-10-28-llama-cpp-v0-8-0",
+    "published_at": "2026-10-28",
+    "company": "ggml-org / llama.cpp",
+    "category": "Local Inference Runtime",
+    "title": "llama.cpp v0.8.0 adds LFM3 multimodal support and experimental real-time speech APIs",
+    "summary": "Stable v0.8.0 adds LFM3 text, vision, audio, omni and decision support, experimental /v1/realtime and /tts endpoints, many additional architectures, model-download UI, tool-call improvements and sparse-attention/cache work.",
+    "model_name": "llama.cpp v0.8.0",
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Cross-platform CPU/GPU runtime. Audio/vision and large models require modality projectors and sufficient RAM/VRAM; real-time audio API is experimental.",
+    "best_use_cases": "Local speech assistants, offline transcription/TTS, running LFM3 models, GGUF model serving, tool-calling applications",
+    "worth_testing": "Yes for users needing LFM3 or local speech. Test audio endpoint compatibility and output accuracy before production; not all multimodal features are equally mature.",
+    "importance": "Worth Testing",
+    "confidence": "High: October 28 stable GitHub release and features are documented by maintainers; workload performance and experimental real-time endpoint reliability need testing.",
+    "tags": [
+      "llama.cpp",
+      "Runtime",
+      "GGUF",
+      "LFM3",
+      "Realtime Audio",
+      "TTS",
+      "Local Inference"
+    ],
+    "sources": [
+      {
+        "name": "Official llama.cpp v0.8.0 release",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.8.0"
+      }
+    ],
+    "discovered_via": "Official GitHub release metadata and changelog"
+  },
+  {
+    "id": "2026-10-28-ollama-v0-40-13-lfm3-platform-expansion",
+    "published_at": "2026-10-28",
+    "company": "Ollama",
+    "category": "Local Inference Runtime",
+    "title": "Ollama v0.40.13 expands LFM3 audio and omni inference to Linux and Windows",
+    "summary": "Ollama v0.40.13 brings Liquid AI LFM3 models, including speech-generating LFM3-Audio and multimodal LFM3-Omni, to Linux and Windows after the v0.40.12 Apple Silicon launch. The prior stable release also added 2B d1 decision models and MLX speed improvements.",
+    "model_name": "Ollama v0.40.13",
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Local Linux, Windows and Apple Silicon support; 2B-class quantized models are lightweight but audio/vision workloads and long contexts require extra RAM and platform-specific testing.",
+    "best_use_cases": "Private on-device speech assistants, multimodal inference, lightweight tool agents and classification pipelines",
+    "worth_testing": "Yes for Linux/Windows users needing LFM3 audio/omni; validate audio input/output and model support on your exact hardware. Other users need not upgrade solely for this release.",
+    "importance": "Worth Testing",
+    "confidence": "High for October 28 stable release and cross-platform support; actual performance and compatibility vary by OS and hardware.",
+    "tags": [
+      "Ollama",
+      "LFM3",
+      "Linux",
+      "Windows",
+      "Apple Silicon",
+      "Audio",
+      "Omni",
+      "Runtime"
+    ],
+    "sources": [
+      {
+        "name": "Official Ollama v0.40.13 release",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13"
+      },
+      {
+        "name": "Official Ollama v0.40.12 release",
+        "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12"
+      }
+    ],
+    "discovered_via": "Official GitHub release metadata"
+  },
+  {
     "id": "2026-10-27-google-deepmind-genie-4-world-simulation",
     "published_at": "2026-10-27",
     "company": "Google DeepMind",
@@ -82,6 +236,273 @@
       }
     ],
     "discovered_via": "Anthropic primary research report, cross-checked with partner experimental publications"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-lfm3-1-7b",
+    "published_at": "2026-10-27",
+    "company": "Liquid AI",
+    "category": "Small Open-Weight Models",
+    "title": "Liquid AI releases LFM3-1.7B text model for local tool-using agents",
+    "summary": "Liquid AI's 1.73B-parameter tri-hybrid text model targets tool calls, structured outputs and fine-tuning, with a 256K-token context. Its 4-bit weights occupy about 1GB; complex coding and reasoning remain out of scope.",
+    "model_name": "LFM3-1.7B",
+    "model_type": "Tri-hybrid dense text language model",
+    "input_output": "Text → text, structured JSON and tool calls",
+    "total_parameters_b": 1.73,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "About 1GB for 4-bit weights plus runtime and KV cache; suitable for laptops and edge devices with adequate headroom. Runs via llama.cpp and Ollama.",
+    "best_use_cases": "Lightweight private assistants, tool routing, structured extraction, single-GPU domain fine-tuning",
+    "worth_testing": "Strong yes for lightweight local agents; compare tool success, latency and factual reliability against Qwen3.5-2B/4B. Check LFM Open License v1.0 revenue restrictions.",
+    "importance": "Important",
+    "confidence": "High for published checkpoint, architecture and total parameters; benchmark advantages are developer-reported.",
+    "tags": [
+      "Liquid AI",
+      "LFM3",
+      "1.73B",
+      "Small Model",
+      "Local",
+      "Agent",
+      "Tool Calling",
+      "256K"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI LFM3-1.7B model card",
+        "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      },
+      {
+        "name": "Liquid AI LFM3 release",
+        "url": "https://www.liquid.ai/blog/lfm3"
+      },
+      {
+        "name": "Liquid AI model license",
+        "url": "https://www.liquid.ai/lfm-license"
+      }
+    ],
+    "discovered_via": "Liquid AI official release and Hugging Face publisher model card"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-lfm3-vl-2b",
+    "published_at": "2026-10-27",
+    "company": "Liquid AI",
+    "category": "Small Open-Weight Models",
+    "title": "LFM3-VL-2B brings local image, document and video understanding",
+    "summary": "Liquid AI released a 1.92B-total-parameter vision-language model combining a 1.73B text backbone with a 164M vision encoder and 25M projector. It accepts text, images and sampled video and has 128K context.",
+    "model_name": "LFM3-VL-2B",
+    "model_type": "Tri-hybrid vision-language model",
+    "input_output": "Text + images + video → text",
+    "total_parameters_b": 1.92,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "BF16 weights ~3.84GB before runtime; quantized checkpoints are suitable for consumer GPUs and edge systems, with extra memory for images, video and long context.",
+    "best_use_cases": "On-device visual Q&A, OCR and charts, screenshots, short video understanding, visual grounding",
+    "worth_testing": "Yes for compact document and visual assistants. Evaluate OCR, tables and video frame sampling against dedicated vision/OCR models; publisher comparisons need replication.",
+    "importance": "Worth Testing",
+    "confidence": "High on official weights, component parameter counts and modalities; medium on comparative visual benchmarks.",
+    "tags": [
+      "Liquid AI",
+      "LFM3",
+      "1.92B",
+      "Vision",
+      "Video",
+      "OCR",
+      "Local",
+      "Small Model"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI LFM3-VL-2B model card",
+        "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B"
+      },
+      {
+        "name": "Liquid AI release",
+        "url": "https://www.liquid.ai/blog/lfm3"
+      },
+      {
+        "name": "Liquid AI license",
+        "url": "https://www.liquid.ai/lfm-license"
+      }
+    ],
+    "discovered_via": "Liquid AI primary model card and release blog"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-lfm3-audio-2b",
+    "published_at": "2026-10-27",
+    "company": "Liquid AI",
+    "category": "Small Open-Weight Models",
+    "title": "LFM3-Audio-2B adds local multilingual speech recognition, translation and TTS",
+    "summary": "Liquid AI released a 2B-total-parameter speech model accepting text or audio and producing text, speech or both, with streaming input and output and 32K context. It supports transcription, translation, spoken tool commands and speech synthesis.",
+    "model_name": "LFM3-Audio-2B",
+    "model_type": "Tri-hybrid speech-language model with causal audio encoder and codec",
+    "input_output": "Text + audio → text + 24kHz speech",
+    "total_parameters_b": 2,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "~4GB BF16 weights before runtime, less with quantization; local CPU/GPU GGUF, Apple MLX and ONNX paths available. Real-time responsiveness depends on CPU/GPU and audio pipeline.",
+    "best_use_cases": "Offline voice assistants, multilingual dictation, spoken app controls, TTS, audio translation",
+    "worth_testing": "Yes for private voice workflows. Test transcription WER, speech quality, turn latency and supported languages; reported benchmarks are publisher-run.",
+    "importance": "Worth Testing",
+    "confidence": "High for published checkpoint, total size, supported modalities and runtimes; medium for latency and speech quality claims.",
+    "tags": [
+      "Liquid AI",
+      "LFM3",
+      "2B",
+      "Audio",
+      "Speech",
+      "ASR",
+      "TTS",
+      "Local"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI LFM3-Audio-2B model card",
+        "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B"
+      },
+      {
+        "name": "Liquid AI release",
+        "url": "https://www.liquid.ai/blog/lfm3"
+      },
+      {
+        "name": "Liquid AI license",
+        "url": "https://www.liquid.ai/lfm-license"
+      }
+    ],
+    "discovered_via": "Liquid AI official model card and release"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-lfm3-omni-2b",
+    "published_at": "2026-10-27",
+    "company": "Liquid AI",
+    "category": "Small Open-Weight Models",
+    "title": "LFM3-Omni-2B combines video, image, speech and text in one local model",
+    "summary": "Liquid AI released a 2.17B-total-parameter omni model that accepts text, images, video and audio and outputs text or speech. GGUF and llama.cpp support local use, although video support varies by runtime.",
+    "model_name": "LFM3-Omni-2B",
+    "model_type": "Tri-hybrid omni-modal model with vision and audio encoders",
+    "input_output": "Text + images + video + audio → text and 24kHz speech",
+    "total_parameters_b": 2.17,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "~4.34GB BF16 weights before runtime; 4-bit GGUF model around 1.1GB excluding multimodal projectors, KV cache and working memory. Check runtime modality support, especially video.",
+    "best_use_cases": "Private multimodal assistants, spoken visual Q&A, voice plus camera, audio-video understanding",
+    "worth_testing": "Yes for multimodal local prototypes; check speech and video behavior in the exact runtime rather than assuming all modalities work equally.",
+    "importance": "Worth Testing",
+    "confidence": "High on official weights, 2.17B total and intended modalities; medium on comparative quality and runtime completeness.",
+    "tags": [
+      "Liquid AI",
+      "LFM3",
+      "2.17B",
+      "Omni",
+      "Vision",
+      "Audio",
+      "Video",
+      "Local"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI LFM3-Omni-2B model card",
+        "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B"
+      },
+      {
+        "name": "Official GGUF model card",
+        "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B-GGUF"
+      },
+      {
+        "name": "Liquid AI release",
+        "url": "https://www.liquid.ai/blog/lfm3"
+      },
+      {
+        "name": "Liquid AI license",
+        "url": "https://www.liquid.ai/lfm-license"
+      }
+    ],
+    "discovered_via": "Liquid AI primary Hugging Face model and GGUF cards"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-d1-2b",
+    "published_at": "2026-10-27",
+    "company": "Liquid AI",
+    "category": "Small Open-Weight Models",
+    "title": "Liquid AI d1-2B makes structured text and visual decisions without token generation",
+    "summary": "Built on LFM3-VL-2B, d1-2B has 1.92B total parameters and returns typed decisions with probabilities from text, JSON, images or video. It targets classification, extraction, routing, scoring and visual inspection.",
+    "model_name": "d1-2B",
+    "model_type": "Vision-language structured decision model",
+    "input_output": "Text + JSON + images + video + named questions → typed decisions and probabilities",
+    "total_parameters_b": 1.92,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "~3.84GB BF16 weights before runtime, with quantized and GPU options depending on serving implementation. Requires a decision-capable inference API rather than ordinary chat generation.",
+    "best_use_cases": "Address-candidate verification, document triage, intent routing, moderation, visual inspection, reranking",
+    "worth_testing": "Strong yes for high-volume decisions. Compare calibration, accuracy and latency with d3 and elephant-1 on labeled tasks; model is not a chat assistant.",
+    "importance": "Worth Testing",
+    "confidence": "High for model card, parameters and decision interface; medium for vendor-run performance claims and probability calibration across domains.",
+    "tags": [
+      "Liquid AI",
+      "d1",
+      "1.92B",
+      "Decision Model",
+      "Classification",
+      "Vision",
+      "Local"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI d1-2B model card",
+        "url": "https://huggingface.co/LiquidAI/d1-2B"
+      },
+      {
+        "name": "Liquid AI LFM3 release",
+        "url": "https://www.liquid.ai/blog/lfm3"
+      },
+      {
+        "name": "Liquid AI license",
+        "url": "https://www.liquid.ai/lfm-license"
+      }
+    ],
+    "discovered_via": "Official Liquid AI model card and release"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-d1-omni-2b",
+    "published_at": "2026-10-27",
+    "company": "Liquid AI",
+    "category": "Small Open-Weight Models",
+    "title": "Liquid AI d1-Omni-2B adds audio-aware structured decisions to compact models",
+    "summary": "Built on LFM3-Omni-2B, the 2.17B-total-parameter d1-Omni returns typed decisions and probabilities about text, images, video and speech without generating a long response. Designed for low-latency multimodal routing and extraction.",
+    "model_name": "d1-Omni-2B",
+    "model_type": "Omni-modal structured decision model",
+    "input_output": "Text + images + video + audio + questions → typed decisions and probabilities",
+    "total_parameters_b": 2.17,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "~4.34GB BF16 weights before runtime; multimodal preprocessing adds memory and compute. Official card documents Transformers serving; verify chosen runtime's decision-head support.",
+    "best_use_cases": "Voice intent routing, multimodal triage, audio content classification, extraction, visual-audio inspection",
+    "worth_testing": "Yes for workflows needing audio and visual decisions together. Benchmark against d1-2B and audio classifiers; validate confidence calibration on domain data.",
+    "importance": "Worth Testing",
+    "confidence": "High for published weights, 2.17B total and model purpose; developer latency and calibration results are not independently verified.",
+    "tags": [
+      "Liquid AI",
+      "d1",
+      "2.17B",
+      "Decision Model",
+      "Audio",
+      "Vision",
+      "Omni",
+      "Local"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI d1-Omni-2B model card",
+        "url": "https://huggingface.co/LiquidAI/d1-Omni-2B"
+      },
+      {
+        "name": "Liquid AI release",
+        "url": "https://www.liquid.ai/blog/lfm3"
+      },
+      {
+        "name": "Liquid AI license",
+        "url": "https://www.liquid.ai/lfm-license"
+      }
+    ],
+    "discovered_via": "Official Liquid AI model card and release"
   },
   {
     "id": "2026-10-26-openai-ai-generated-proofs-external-review",
