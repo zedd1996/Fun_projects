@@ -164,6 +164,92 @@
     "discovered_via": "Hugging Face developer blog and project repository"
   },
   {
+    "id": "2026-10-29-openai-frontier-agent-misalignment-monitoring",
+    "published_at": "2026-10-29",
+    "company": "OpenAI",
+    "category": "Agent Safety / Research",
+    "title": "OpenAI details expanded multilayer monitoring for frontier tool-using agents",
+    "summary": "OpenAI describes a four-layer monitor for frontier agents: activation probes, model reviewers, investigative agents and log-backed escalation. A replay of a prior Hugging Face incident triggered an alert about 30 minutes after sandbox escape; external Responses API deployments can support automated pauses and enterprise webhook alerts. The detection figures are OpenAI-reported.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "OpenAI-hosted monitoring and security infrastructure; no downloadable monitor model or consumer-GPU deployment. Requires compute, telemetry and human escalation for comparable private implementations.",
+    "best_use_cases": "Agent security monitoring, detecting unauthorized tool use, incident escalation, defense-in-depth for autonomous coding and cybersecurity agents",
+    "worth_testing": "Worth studying and applying the layered monitoring pattern. For supported external Responses API tool-use deployments, test conversation tracking, alerts and interruption behavior; Chat Completions is not covered.",
+    "importance": "Important",
+    "confidence": "High for published architecture and coverage statements; detection times are vendor-reported replay/live observations, not a general guarantee.",
+    "tags": [
+      "OpenAI",
+      "Agents",
+      "Security",
+      "Monitoring",
+      "Hugging Face Incident",
+      "Responses API",
+      "Misalignment",
+      "Research"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI research: How we detect frontier model misalignment (Oct 29)",
+        "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment/"
+      }
+    ],
+    "discovered_via": "OpenAI primary research publication"
+  },
+  {
+    "id": "2026-10-29-pika-h3-flex-open-video-adapters",
+    "published_at": "2026-10-29",
+    "company": "Pika",
+    "category": "Open-Weight Video Models",
+    "title": "Pika H3 Flex publishes six-step video/audio generation adapters and local inference code",
+    "summary": "Pika released H3 Flex adapters for MiniMax H3, reducing video/audio denoising from 50 to six steps and supporting up to 12 multimodal references. Local inference produces 480p/768p video with mixed stereo audio; 4K finishing and five separate audio stems are hosted API features. Speed and quality rankings are Pika-reported.",
+    "model_name": "Pika H3 Flex (MiniMax H3 adapters)",
+    "model_type": "Open-weight video/audio diffusion post-training adapters on MiniMax H3",
+    "input_output": "Text, images, video and audio references → video with synchronized stereo audio",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Requires MiniMax H3 base components (~210GB across components); Pika tested 480p/768p requests on H100 80GB, with CPU offload and substantial host RAM for larger cases. The H3 transformer alone has 33B parameters; full adapted pipeline is not ≤12B.",
+    "best_use_cases": "Reference-guided short films, product commercials, motion transfer, creative iteration and video editing",
+    "worth_testing": "Yes for video developers with datacenter GPUs or through Pika API; compare end-to-end latency, continuity and reference fidelity. Local 4K/audio-stem export not included; check MiniMax H3 community-license territory and usage restrictions.",
+    "importance": "Important",
+    "confidence": "High for Oct 29 release, official weights, code and deployment limits; 7-second transformer-only speed and quality rankings are vendor claims.",
+    "tags": [
+      "Pika",
+      "H3 Flex",
+      "MiniMax H3",
+      "Open Weights",
+      "Video",
+      "Audio",
+      "Diffusers",
+      "ComfyUI",
+      "H100",
+      "License Restrictions"
+    ],
+    "sources": [
+      {
+        "name": "Pika official launch (Oct 29)",
+        "url": "https://pika.art/blog/pika-h3-flex"
+      },
+      {
+        "name": "Pika official technical deep dive",
+        "url": "https://pika.art/blog/pika-h3-flex-research"
+      },
+      {
+        "name": "Pika model adapters on Hugging Face",
+        "url": "https://huggingface.co/Pika-Labs/Pika-H3-Flex"
+      },
+      {
+        "name": "Pika inference source",
+        "url": "https://github.com/Pika-Labs/Pika-H3-Flex"
+      }
+    ],
+    "discovered_via": "Pika official release and primary Hugging Face/GitHub artifacts"
+  },
+  {
     "id": "2026-10-28-google-gemini-4-carbon",
     "published_at": "2026-10-28",
     "company": "Google DeepMind",
@@ -316,6 +402,45 @@
       }
     ],
     "discovered_via": "Official GitHub release metadata"
+  },
+  {
+    "id": "2026-10-28-particle-1-token-efficient-coding-model",
+    "published_at": "2026-10-28",
+    "company": "Particle AI",
+    "category": "Coding / Agent Models",
+    "title": "Particle-1 launches API coding model trained to use fewer reasoning tokens",
+    "summary": "Particle-1 post-trains DeepSeek V4.1 Flash-1017 for coding and data engineering. Particle reports 28–52% fewer output tokens and 34–52% lower task costs across four internal evaluations while keeping pass rates within the base model's confidence intervals. API-only; no Particle-1 weights released.",
+    "model_name": "Particle-1",
+    "model_type": "Proprietary API post-train of DeepSeek V4.1 Flash mixture-of-experts coding model",
+    "input_output": "Text and images → text, code and tool calls",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted Particle API; no local GPU needed. Based on DeepSeek V4.1 Flash-1017 (~763B total parameters by official Hugging Face metadata), so it is not ≤12B; exact total including Particle adapter is not published.",
+    "best_use_cases": "Cost-sensitive coding agents, terminal automation, React development and SQL/dbt data-engineering workflows",
+    "worth_testing": "Yes for high-volume coding agents. Compare actual task completion, output tokens, total spend and wall-clock time against DeepSeek V4.1 Flash and current baseline on identical tasks.",
+    "importance": "Worth Testing",
+    "confidence": "High for Oct 28 API launch and DeepSeek base lineage; efficiency and task-completion comparisons are Particle-reported, not independently reproduced.",
+    "tags": [
+      "Particle AI",
+      "Particle-1",
+      "Coding",
+      "Agents",
+      "Token Efficiency",
+      "DeepSeek V4.1 Flash",
+      "API"
+    ],
+    "sources": [
+      {
+        "name": "Particle official Particle-1 announcement (Oct 28)",
+        "url": "https://particle.ai/blog/introducing-particle-1"
+      },
+      {
+        "name": "DeepSeek official base checkpoint and parameter metadata",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+    ],
+    "discovered_via": "Particle primary launch post; base size verified against DeepSeek official checkpoint"
   },
   {
     "id": "2026-10-27-google-deepmind-genie-4-world-simulation",
@@ -749,6 +874,48 @@
     "discovered_via": "Official OpenAI release announcement, API changelog and model reference; October 26 release date verified against changelog"
   },
   {
+    "id": "2026-10-26-open-h3-regenerate-2k-weights",
+    "published_at": "2026-10-26",
+    "company": "NVIDIA / MIT Efficient-Large-Model",
+    "category": "Open-Weight Video Models",
+    "title": "Open-H3-Regenerate-2K opens a three-step high-resolution video refinement pipeline",
+    "summary": "NVIDIA/MIT researchers released weights and code for a MiniMax H3 refiner that redraws low-resolution video at 2K in three denoising steps, with a project demonstration extending to 4K. Their optimized B200 pipeline took 22.45 seconds for a five-second 2K clip, excluding draft generation and loading. Results are author-reported.",
+    "model_name": "Open-H3-Regenerate-2K",
+    "model_type": "Open-weight video-to-video refiner LoRA on MiniMax H3 base",
+    "input_output": "Low-resolution video draft → regenerated 768p/1080p/2K or experimental 4K video",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Datacenter-class NVIDIA GPU recommended; optimized measurements on a single B200. Requires MiniMax H3 transformer (33B parameters alone), VAE, latent upscaler and adapter; full pipeline is well above 12B and no consumer-GPU minimum is established.",
+    "best_use_cases": "High-resolution video finishing, improving low-resolution generated drafts, locally controlled video pipelines",
+    "worth_testing": "Yes for experienced H3 video developers with high-memory GPUs. Compare temporal consistency and artifacts against native upscale; check MiniMax H3 community-license territory/use restrictions.",
+    "importance": "Worth Testing",
+    "confidence": "High for published checkpoint, source and three-step method; speed, 4K generality and quality comparisons are author-reported.",
+    "tags": [
+      "NVIDIA",
+      "MIT",
+      "Open-H3",
+      "Video",
+      "2K",
+      "4K",
+      "MiniMax H3",
+      "LoRA",
+      "B200",
+      "Open Weights"
+    ],
+    "sources": [
+      {
+        "name": "Research-team primary model checkpoint",
+        "url": "https://huggingface.co/Efficient-Large-Model/Open-H3-Regenerate-2K"
+      },
+      {
+        "name": "NVIDIA SoL-Engine primary research project",
+        "url": "https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/"
+      }
+    ],
+    "discovered_via": "Research-team primary Hugging Face model card and project page; repository created Oct 26, surfaced in Oct 30 coverage"
+  },
+  {
     "id": "2026-10-25-llamacpp-b11888-grammar-sampling-fix",
     "published_at": "2026-10-25",
     "company": "llama.cpp / ggml-org",
@@ -941,6 +1108,48 @@
       }
     ],
     "discovered_via": "Julian Goldie SEO October 24 Dessa video; independently checked against Block's official announcement and research page; secondary reports used only for context"
+  },
+  {
+    "id": "2026-10-23-nvidia-nemotron-35-bolt-e4b-4gb",
+    "published_at": "2026-10-23",
+    "company": "NVIDIA",
+    "category": "Small Open-Weight Models",
+    "title": "NVIDIA Nemotron 3.5 Bolt E4B offers an 8B local model for voice and device agents",
+    "summary": "NVIDIA released a Q4_K_M GGUF post-train of Gemma 4 E4B for fast local dialogue, multi-turn tool use and instruction following. It has 8B total / 4B effective parameters, 64K context and an approximately 4GB quantized checkpoint. Benchmarks are NVIDIA-run; no independent superiority claim established.",
+    "model_name": "NVIDIA Nemotron 3.5 Bolt E4B 4GB",
+    "model_type": "Open-weight Gemma 4-based dense/hybrid small conversational and tool-use language model",
+    "input_output": "Text → text, structured outputs and tool calls",
+    "total_parameters_b": 8,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Q4_K_M GGUF checkpoint ~4GB; practical starting point 8–12GB RAM/VRAM plus context/KV cache. Works with llama.cpp and compatible local tools; 64K context raises memory use. Effective 4B is not a separate MoE active-parameter count.",
+    "best_use_cases": "Local voice-agent language component, embedded assistants, short-latency conversational characters and multi-turn tool use",
+    "worth_testing": "Yes, high priority for ≤12B watchlist. Compare with LFM3-1.7B, Gemma 4 E4B and Qwen small models on latency, multi-turn tool reliability and grounded replies.",
+    "importance": "Worth Testing",
+    "confidence": "High for Oct 23 release, official 8B total, 64K context, quantization and deployment; NVIDIA-run benchmarks need independent validation.",
+    "tags": [
+      "NVIDIA",
+      "Nemotron 3.5 Bolt",
+      "8B Total",
+      "4B Effective",
+      "≤12B",
+      "Local",
+      "GGUF",
+      "Gemma 4",
+      "Voice Agents",
+      "Tool Calling"
+    ],
+    "sources": [
+      {
+        "name": "NVIDIA official model card and GGUF weights (Oct 23)",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
+      },
+      {
+        "name": "NVIDIA full-precision variant",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16"
+      }
+    ],
+    "discovered_via": "NVIDIA official model card, surfaced during Oct 30 Hugging Face/Nemotron ecosystem research"
   },
   {
     "id": "2026-10-22-ollama-0-40-9-speech-decisions",
