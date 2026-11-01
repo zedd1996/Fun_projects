@@ -1,5 +1,92 @@
 [
   {
+    "id": "2026-10-30-microsoft-mage-vl-cowork",
+    "published_at": "2026-10-30",
+    "company": "Microsoft",
+    "category": "Open-Weight Small Models / Computer Use",
+    "title": "Microsoft releases Mage-VL-Cowork hybrid GUI and terminal agent",
+    "summary": "Microsoft released an Apache-2.0 vision-language computer-use checkpoint that switches between screenshot-based GUI actions and terminal/code operations. The 4B language backbone plus vision tower totals roughly 4.7B stored parameters (Hugging Face rounds to 5B). Microsoft reports 66.0% on OSWorld-Verified; independent reproduction is pending.",
+    "model_name": "Mage-VL-Cowork",
+    "model_type": "Open-weight vision-language hybrid computer-use agent",
+    "input_output": "Screenshots and text → GUI actions, shell commands, text and tool calls",
+    "total_parameters_b": 4.7,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "9.48GB BF16 checkpoint (roughly 4.7B parameters including vision); budget 16–24GB or more GPU memory for inference and screenshots, with 24GB a safer starting point. Official evaluation uses SGLang and isolated desktop VMs; not a turnkey Ollama agent.",
+    "best_use_cases": "Private desktop agents, spreadsheet and document automation, web app testing, GUI-plus-terminal workflows",
+    "worth_testing": "Yes in a disposable VM with no credentials. Benchmark task completion and safe tool routing on your workflows; require approval for consequential actions.",
+    "importance": "Important",
+    "confidence": "High for Oct 30 checkpoint, Apache-2.0 license and hybrid architecture; 4.7B total estimated from BF16 tensor bytes while publisher labels 4B and Hub rounds to 5B; 66% benchmark is Microsoft-reported.",
+    "tags": [
+      "Microsoft",
+      "Mage-VL-Cowork",
+      "Small Models",
+      "4.7B Total",
+      "Computer Use",
+      "Vision",
+      "Hybrid Agent",
+      "Local",
+      "GUI",
+      "Bash",
+      "Apache 2.0"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft Mage-VL-Cowork publisher model card",
+        "url": "https://huggingface.co/microsoft/Mage-VL-Cowork"
+      },
+      {
+        "name": "Official October 30 model release commit history",
+        "url": "https://huggingface.co/microsoft/Mage-VL-Cowork/commits/main"
+      },
+      {
+        "name": "Microsoft Mage code and evaluation",
+        "url": "https://github.com/microsoft/Mage"
+      }
+    ],
+    "discovered_via": "Hugging Face publisher checkpoint and Microsoft release commit; independently checked against official documentation"
+  },
+  {
+    "id": "2026-10-30-google-gemini-computer-use-ga",
+    "published_at": "2026-10-30",
+    "company": "Google",
+    "category": "AI API / Agent Tools",
+    "title": "Gemini Computer Use reaches general availability across both Gemini APIs",
+    "summary": "Google made Gemini's Computer Use tool generally available in both Interactions and GenerateContent APIs. Supported Gemini models can propose screenshot-grounded browser, mobile and desktop actions; developers still supply the sandbox and execute actions. Includes safety policies and optional screenshot prompt-injection detection.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Gemini inference is cloud-hosted; developers run a local or remote sandbox/browser (for example Playwright) to execute actions and return screenshots. No local model GPU required.",
+    "best_use_cases": "Browser and desktop automation, UI regression tests, form entry and supervised multi-step app workflows",
+    "worth_testing": "Yes for developer agents. Test Gemini 3.8 Flash on low-risk workflows with a sandbox, confirmation gates, and opt-in prompt-injection detection; do not give unattended access to sensitive accounts.",
+    "importance": "Worth Testing",
+    "confidence": "High: October 30 general availability explicitly documented in Google Gemini API changelog and Computer Use documentation.",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Computer Use",
+      "API",
+      "General Availability",
+      "Agents",
+      "Browser Automation",
+      "Safety"
+    ],
+    "sources": [
+      {
+        "name": "Google Gemini API release notes, October 30",
+        "url": "https://ai.google.dev/gemini-api/docs/changelog"
+      },
+      {
+        "name": "Google Computer Use developer documentation",
+        "url": "https://ai.google.dev/gemini-api/docs/computer-use"
+      }
+    ],
+    "discovered_via": "Google official Gemini API changelog and primary technical documentation"
+  },
+  {
     "id": "2026-10-29-mistral-large-4-open-weights",
     "published_at": "2026-10-29",
     "company": "Mistral AI",
@@ -792,6 +879,52 @@
       }
     ],
     "discovered_via": "Official Liquid AI model card and release"
+  },
+  {
+    "id": "2026-10-27-baidu-unlimited-ocr-2",
+    "published_at": "2026-10-27",
+    "company": "Baidu",
+    "category": "Open-Weight Small Models / Document OCR",
+    "title": "Baidu Unlimited-OCR-2 brings sparse-reference attention to long-document parsing",
+    "summary": "Baidu released MIT-licensed Unlimited-OCR-2, a 3.34B-total-parameter multimodal MoE document parser. Sparse Reference Sliding Window Attention limits the growing attention cost of multi-page OCR, with reported gains on long-document benchmarks. Public weights and code support Transformers and a customized SGLang build.",
+    "model_name": "Unlimited-OCR-2",
+    "model_type": "Open-weight vision-language mixture-of-experts document parser",
+    "input_output": "Page images and text instructions → structured text, layout and page-marked OCR",
+    "total_parameters_b": 3.344,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "3,343,978,497 stored parameters (~6.69GB BF16 tensor data). Baidu documents testing on NVIDIA A800 80GB and a custom SGLang wheel; a 24GB CUDA GPU is a plausible starting point for smaller documents, not a verified minimum. Very long jobs need extra memory and careful batching; stock llama.cpp/Ollama support is not established.",
+    "best_use_cases": "Long PDFs, scanned reports, multi-page tables, document archives and local multilingual OCR",
+    "worth_testing": "Yes for document-heavy workflows. Compare table fidelity, reading order and cross-page continuity with OCRia, PaddleOCR and your current parser; do not assume literally unlimited context.",
+    "importance": "Worth Testing",
+    "confidence": "High for Oct 27 public release, 3.344B stored-parameter count, license and inference instructions; publisher-only long-document benchmark and memory claims need independent verification.",
+    "tags": [
+      "Baidu",
+      "Unlimited-OCR-2",
+      "3.34B Total",
+      "OCR",
+      "Document Parsing",
+      "Long Context",
+      "Local",
+      "MIT",
+      "Hugging Face",
+      "MoE"
+    ],
+    "sources": [
+      {
+        "name": "Baidu official Unlimited-OCR-2 checkpoint and release log",
+        "url": "https://huggingface.co/baidu/Unlimited-OCR-2"
+      },
+      {
+        "name": "Baidu Unlimited-OCR source code",
+        "url": "https://github.com/baidu/Unlimited-OCR"
+      },
+      {
+        "name": "Baidu model release history",
+        "url": "https://huggingface.co/baidu/Unlimited-OCR-2/commits/main"
+      }
+    ],
+    "discovered_via": "Hugging Face Baidu publisher checkpoint and original project release log; catch-up discovery"
   },
   {
     "id": "2026-10-26-openai-ai-generated-proofs-external-review",
