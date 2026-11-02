@@ -87,6 +87,92 @@
     "discovered_via": "Google official Gemini API changelog and primary technical documentation"
   },
   {
+    "id": "2026-10-30-sensenova-loop-9b-preview",
+    "published_at": "2026-10-30",
+    "company": "SenseNova / SenseTime",
+    "category": "Open-Weight Small Models / Multimodal",
+    "title": "SenseNova releases Loop-9B preview with shared-weight repeated layers",
+    "summary": "SenseNova published an Apache-2.0 text-and-image model with roughly 9B stored parameters. It reuses a 24-layer decoder block twice, giving 56 layer executions from 32 distinct layers, and reports up to 256K-token training sequences. The claimed ~14.6B inference-equivalent compute is not its stored parameter count. Preview inference requires custom implementations; comparative benchmarks are vendor-reported.",
+    "model_name": "SenseNova-Loop-9B-Preview",
+    "model_type": "Open-weight looped, shared-weight multimodal autoregressive transformer",
+    "input_output": "Text and images → text, code, tool-call text",
+    "total_parameters_b": 9,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Approximately 18–20GB BF16 weights before KV cache and image buffers; 24–32GB GPU is a practical short-context experiment starting point, not a certified minimum. The official LightLLM example uses four GPUs; custom Transformers code or SGLang/vLLM development integrations are needed. 256K is a training-sequence limit, not a validated single-GPU serving guarantee.",
+    "best_use_cases": "Long-document analysis, multimodal document understanding, local coding agents, tool use, research on shared-weight inference",
+    "worth_testing": "Yes for developers with suitable CUDA hardware. Benchmark actual task success, long-context recall, speed and compatibility against Qwen3.5-9B; avoid treating 14.6B inference-equivalent compute as model size.",
+    "importance": "Important",
+    "confidence": "High for October 30 release, Apache-2.0 weights, approximate 9B stored scale, architecture and custom deployment instructions; medium-low for vendor performance comparisons; full independent evaluation unavailable.",
+    "tags": [
+      "SenseNova",
+      "SenseTime",
+      "9B Total",
+      "Small Models",
+      "Looped Transformer",
+      "Vision",
+      "Open Weights",
+      "Apache 2.0",
+      "Local",
+      "Long Context",
+      "Agents"
+    ],
+    "sources": [
+      {
+        "name": "SenseNova publisher model card, October 30 release and architecture",
+        "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview"
+      }
+    ],
+    "discovered_via": "Independent model-release discovery; verified directly against the publisher's Hugging Face model card"
+  },
+  {
+    "id": "2026-10-30-diffuspace-clover-35b-a3b-preview",
+    "published_at": "2026-10-30",
+    "company": "DiffuSpace",
+    "category": "Open-Weight Models / Diffusion LLM",
+    "title": "DiffuSpace releases Clover-35B-A3B diffusion language model and official GGUF",
+    "summary": "DiffuSpace released a 35B-total/3B-active MoE block-diffusion text model under Apache 2.0, with public BF16 and GGUF weights and llama.cpp/SGLang integration. Its 680 tokens/s GB300 and agent benchmark results are developer-run, not independent measurements. Official Q4_K_M GGUF is 21.42GiB; the model does not qualify as ≤12B.",
+    "model_name": "Clover-35B-A3B-Preview",
+    "model_type": "Open-weight block-diffusion mixture-of-experts text language model",
+    "input_output": "Text → text, code and tool-call text",
+    "total_parameters_b": 35,
+    "active_parameters_b": 3,
+    "local": true,
+    "hardware": "Full BF16 weights roughly 70GB; official Q4_K_M GGUF is 21.42GiB and Q4_0 18.24GiB. Budget roughly 32GB GPU/unified memory for comfortable Q4 testing, or CPU/RAM offload with slower performance. Vendor's 680-token/s result used a GB300 GPU, not a consumer device. Custom llama.cpp integration may be needed.",
+    "best_use_cases": "Local coding agents, tool use, diffusion-decoding research, low-latency text generation on high-memory GPUs",
+    "worth_testing": "Yes if hardware permits. Compare quantized task success, tokens/sec and time to completion with Qwen3.6-35B-A3B under matched settings; do not extrapolate BF16 GB300 throughput to Q4 consumer hardware.",
+    "importance": "Worth Testing",
+    "confidence": "High on October 30 release, 35B total/3B active, weights, GGUF sizes and Apache-2.0 licensing; medium-low on publisher-only benchmark and throughput claims.",
+    "tags": [
+      "DiffuSpace",
+      "Clover",
+      "35B Total",
+      "3B Active",
+      "Diffusion",
+      "MoE",
+      "Open Weights",
+      "GGUF",
+      "llama.cpp",
+      "Local",
+      "Coding"
+    ],
+    "sources": [
+      {
+        "name": "DiffuSpace publisher launch article dated October 30",
+        "url": "https://huggingface.co/blog/Diffuspace/clover-35b-a3b-preview"
+      },
+      {
+        "name": "Official Clover model card",
+        "url": "https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview"
+      },
+      {
+        "name": "Official GGUF variants and sizes",
+        "url": "https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview-GGUF"
+      }
+    ],
+    "discovered_via": "Hugging Face developer release and model catalog; validated against publisher announcement and official checkpoints"
+  },
+  {
     "id": "2026-10-29-mistral-large-4-open-weights",
     "published_at": "2026-10-29",
     "company": "Mistral AI",
@@ -528,6 +614,47 @@
       }
     ],
     "discovered_via": "Particle primary launch post; base size verified against DeepSeek official checkpoint"
+  },
+  {
+    "id": "2026-10-28-genspark-sb-box-agent-sandboxes",
+    "published_at": "2026-10-28",
+    "company": "Genspark",
+    "category": "Agent Infrastructure / Sandboxes",
+    "title": "Genspark opens SB-Box beta for persistent isolated agent virtual machines",
+    "summary": "Genspark opened SB-Box beta: cloud Linux virtual machines for coding agents with per-box isolation, CLI/REST access, configurable networking, and freeze/resume snapshots preserving processes and memory. Vendor reports sub-second creation/resume; speed and isolation guarantees are not independently audited. Paid plan and storage/compute charges apply.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted Linux VM with plan-dependent vCPU/RAM/storage, accessed via gsk CLI or REST API. No local GPU required; not a local inference runtime. Frozen boxes retain disk and memory snapshots, with disk billing continuing; review networking and credential controls.",
+    "best_use_cases": "Isolated agent code execution, long-running coding tasks, reproducible test environments, stateful agent sessions, rollback and sandbox forking",
+    "worth_testing": "Yes for developers running agents that execute code. Compare sandbox isolation, cold start, resume reliability, network policy and total cost against existing VMs or containers; keep secrets out of test boxes.",
+    "importance": "Worth Testing",
+    "confidence": "High on vendor beta availability and documented API/VM lifecycle; medium-low on vendor-only speed and security claims.",
+    "tags": [
+      "Genspark",
+      "SB-Box",
+      "Agent Infrastructure",
+      "Sandbox",
+      "Virtual Machine",
+      "Hosted",
+      "Persistent State",
+      "Security",
+      "Beta"
+    ],
+    "sources": [
+      {
+        "name": "Genspark official SB-Box overview",
+        "url": "https://www.genspark.ai/sb-box/intro"
+      },
+      {
+        "name": "Genspark SB-Box developer documentation",
+        "url": "https://www.genspark.ai/sb-box/docs"
+      }
+    ],
+    "discovered_via": "Julian Goldie SEO October 31 indexed video on SB-Box; independently verified against Genspark's official documentation and October 28 vendor announcement"
   },
   {
     "id": "2026-10-27-google-deepmind-genie-4-world-simulation",
@@ -1525,6 +1652,49 @@
       }
     ],
     "discovered_via": "Official Tencent model card and repository; total parameter count from Hugging Face safetensors metadata rather than 4B branding"
+  },
+  {
+    "id": "2026-10-22-google-elephant-goldfish-agent-plugin",
+    "published_at": "2026-10-22",
+    "company": "Google Open Source",
+    "category": "Agent Workflows / Developer Tools",
+    "title": "Google open-sources Elephant-Goldfish specification review plugin for coding agents",
+    "summary": "Google published the Apache-2.0 Elephant-Goldfish Model (EGM) plugin: a context-rich 'Elephant' agent drafts a software design and fresh-context 'Goldfish' reviewers challenge assumptions before coding. Works with documented Antigravity, Claude Code and Codex integrations; this is a workflow/plugin, not a new AI model. Google-reported internal use does not prove fewer bugs.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "No special local GPU for the plugin itself; it runs through the chosen coding-agent environment and its hosted or local model. Multiple reviewer subagents consume additional tokens and compute; some host integrations still have verification limits.",
+    "best_use_cases": "Specification-driven development, design reviews, discovering hidden requirements, reviewing complex feature plans before implementation",
+    "worth_testing": "Yes for a feature with real architectural choices; compare missed requirements, review time and token costs against normal coding-agent workflows. Skip for trivial bug fixes; human approval and tests remain necessary.",
+    "importance": "Worth Testing",
+    "confidence": "High on October 22 official Google Open Source announcement, Apache-2.0 repository and workflow; Google internal-adoption and productivity claims are not independently established.",
+    "tags": [
+      "Google",
+      "Elephant-Goldfish",
+      "EGM",
+      "Agents",
+      "Coding",
+      "Design Review",
+      "Open Source",
+      "Apache 2.0",
+      "Claude Code",
+      "Codex",
+      "Antigravity"
+    ],
+    "sources": [
+      {
+        "name": "Google Open Source announcement dated October 22",
+        "url": "https://opensource.googleblog.com/2026/10/introducing-elephant-goldfish-model-plugin.html"
+      },
+      {
+        "name": "Google EGM official source repository and usage guide",
+        "url": "https://github.com/google/elephant-goldfish-model"
+      }
+    ],
+    "discovered_via": "Julian Goldie SEO November 1 indexed video about Elephant-Goldfish; verified against Google Open Source's October 22 announcement and its repository"
   },
   {
     "id": "2026-10-21-recursive-flint-39-8b-coding-model",
