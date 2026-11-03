@@ -423,6 +423,45 @@
     "discovered_via": "Pika official release and primary Hugging Face/GitHub artifacts"
   },
   {
+    "id": "2026-10-29-frontiersmind-lumma-fev-4b-v2",
+    "published_at": "2026-10-29",
+    "company": "FrontiersMind",
+    "category": "Open-Weight Small Models / Decision Models",
+    "title": "FrontiersMind releases Lumma-Fev-4B-v2 structured decision model",
+    "summary": "An Apache-2.0 Qwen3.5-4B-based decision model returns option probabilities in one forward pass instead of generating text. The Hugging Face checkpoint reports 5B total parameters including its decision components; developer-reported average accuracy is 82.4% on eight benchmarks, pending independent reproduction.",
+    "model_name": "Lumma-Fev-4B-v2",
+    "model_type": "Open-weight bidirectional-attention classification / decision model",
+    "input_output": "Text or structured state and typed yes/no or choice questions → probabilities and selected options; optional images via package",
+    "total_parameters_b": 5,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Model card recommends about 10GB GPU memory in BF16; 12–16GB GPU is a reasonable starting point with runtime headroom. Requires lumma-fev >=0.3 for bidirectional attention; not a standard chat/GGUF drop-in.",
+    "best_use_cases": "Local ticket routing, document classification, address candidate verification, calibrated yes/no decisions, multilingual triage",
+    "worth_testing": "Yes, compare against d1-2B, AnyDecisionModel and simple classifiers on held-out labeled tasks; assess accuracy, calibration and latency. Publisher benchmarks are not independent.",
+    "importance": "Worth Testing",
+    "confidence": "High for checkpoint, Apache-2.0 license, 5B Hugging Face total count and local usage; medium-low for developer-reported benchmark comparisons.",
+    "tags": [
+      "small-model",
+      "under-12b",
+      "local",
+      "decision-model",
+      "classification",
+      "hugging-face",
+      "open-weights"
+    ],
+    "sources": [
+      {
+        "name": "Official model card and weights",
+        "url": "https://huggingface.co/FrontiersMind/Lumma-fev-4B-v2"
+      },
+      {
+        "name": "Developer technical announcement",
+        "url": "https://huggingface.co/blog/FrontiersMind/lumma-fev-27b-v2"
+      }
+    ],
+    "discovered_via": "Hugging Face developer release"
+  },
+  {
     "id": "2026-10-28-google-gemini-4-carbon",
     "published_at": "2026-10-28",
     "company": "Google DeepMind",
