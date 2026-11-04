@@ -1,5 +1,106 @@
 [
   {
+    "id": "2026-11-03-openai-eval-production-safety-gap",
+    "published_at": "2026-11-03",
+    "company": "OpenAI",
+    "category": "Agent Safety Research",
+    "title": "OpenAI finds agent safety evaluation results differ substantially from production behavior",
+    "summary": "Across six served models, OpenAI reports safety-evaluation success 10.2–37.4 percentage points below matched production decisions. Misinterpreting the evaluation objective may explain part of the gap; production matching is approximate and independent replication is pending.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "No new inference artifact or hardware requirement; research on hosted Codex agent behavior.",
+    "best_use_cases": [
+      "Agent safety evaluations",
+      "Production monitoring",
+      "Benchmark design"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High for reported study and methodology; medium for generalization beyond sampled contexts",
+    "tags": [
+      "OpenAI",
+      "agent safety",
+      "evaluation",
+      "production"
+    ],
+    "sources": [
+      "https://alignment.openai.com/eval-production-behavior-gap/"
+    ],
+    "discovered_via": "Official OpenAI Alignment research"
+  },
+  {
+    "id": "2026-11-03-openai-physical-engineering-workflows",
+    "published_at": "2026-11-03",
+    "company": "OpenAI",
+    "category": "Applied AI Research",
+    "title": "OpenAI demonstrates GPT-6 and Codex workflows for physical engineering",
+    "summary": "OpenAI details CAD, PCB and simulation workflows, including a prototype device built from AI-assisted designs. Manufacturing still required human review and iteration; no new downloadable model or general API capability was announced.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Hosted GPT-6/Codex tools; physical CAD/PCB software, simulation and manufacturing resources depend on workflow.",
+    "best_use_cases": [
+      "CAD drafting",
+      "PCB prototyping",
+      "Simulation setup",
+      "Engineering design review"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High for published demonstrations; medium for generalizability and efficiency claims",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "CAD",
+      "engineering",
+      "research"
+    ],
+    "sources": [
+      "https://openai.com/index/accelerating-engineering-for-the-physical-world/"
+    ],
+    "discovered_via": "Official OpenAI research"
+  },
+  {
+    "id": "2026-11-02-openai-lifeval-benchmark",
+    "published_at": "2026-11-02",
+    "company": "OpenAI",
+    "category": "Agent Evaluation Research",
+    "title": "OpenAI introduces LifeVal benchmark for practical everyday AI-agent tasks",
+    "summary": "LifeVal evaluates how AI assists with real-life tasks such as childcare, budgeting and paperwork, informed by time-use studies and a 3,995-person survey. OpenAI reports strong performance on some tasks; no new model was released.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Benchmark/research only; no local model or special hardware.",
+    "best_use_cases": [
+      "Evaluating personal assistants",
+      "Real-world agent task design",
+      "Benchmark research"
+    ],
+    "worth_testing": false,
+    "importance": "Interesting but Minor",
+    "confidence": "High on methodology description; external predictive validity unverified",
+    "tags": [
+      "OpenAI",
+      "LifeVal",
+      "benchmark",
+      "agents"
+    ],
+    "sources": [
+      "https://openai.com/index/lifeval/"
+    ],
+    "discovered_via": "Official OpenAI research"
+  },
+  {
     "id": "2026-10-30-microsoft-mage-vl-cowork",
     "published_at": "2026-10-30",
     "company": "Microsoft",
