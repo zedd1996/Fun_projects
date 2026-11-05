@@ -1,5 +1,106 @@
 [
   {
+    "id": "2026-11-04-openai-images-2-6",
+    "published_at": "2026-11-04",
+    "company": "OpenAI",
+    "category": "Image Generation",
+    "title": "OpenAI releases Images 2.6 with faster editing, GIF creation and API controls",
+    "summary": "Images 2.6 launches in ChatGPT, Codex and API. OpenAI reports 50% faster image generation, introduces GIF creation, SVG export and image markup; API offers Flare and Sunburst variants.",
+    "model_name": "GPT-Image-2.6 Flare / Sunburst",
+    "model_type": "Hosted image generation and editing",
+    "input_output": "Text and images to images, edits, GIFs and SVG export",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted OpenAI API or ChatGPT; no local GPU needed.",
+    "best_use_cases": [
+      "Product imagery",
+      "Iterative design editing",
+      "Animated GIFs",
+      "Marketing visuals"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High for launch and features; speed and fidelity are vendor-reported",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "image generation",
+      "API",
+      "GIF"
+    ],
+    "sources": [
+      "https://openai.com/index/introducing-images-2-6/"
+    ],
+    "discovered_via": "OpenAI official announcement"
+  },
+  {
+    "id": "2026-11-04-dharma-field-extractor-2b",
+    "published_at": "2026-11-04",
+    "company": "Dharma-AI",
+    "category": "Document AI",
+    "title": "Dharma Field Extractor uses a 2B model for schema-guided document extraction",
+    "summary": "Dharma-AI introduces a 2B OCR-derived model that returns typed JSON fields from document images, including nested tables and nulls for absent fields. Vendor reports 0.834 benchmark score on 546 documents; no public weights verified.",
+    "model_name": "Dharma Field Extractor",
+    "model_type": "Document vision-language extraction",
+    "input_output": "Document images and optional schema to structured JSON",
+    "total_parameters_b": 2,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Vendor reports self-hosted inference on a single NVIDIA L40S; public weights and independent minimum requirements not verified.",
+    "best_use_cases": [
+      "Invoice field extraction",
+      "Forms to JSON",
+      "Structured document ingestion"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High for announced architecture and demonstration; medium-low for benchmark superiority and public local availability",
+    "tags": [
+      "2B",
+      "document extraction",
+      "OCR",
+      "structured JSON",
+      "small model"
+    ],
+    "sources": [
+      "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor"
+    ],
+    "discovered_via": "Hugging Face team article"
+  },
+  {
+    "id": "2026-11-04-daybreak-red-aws-govcloud",
+    "published_at": "2026-11-04",
+    "company": "OpenAI",
+    "category": "Cybersecurity API",
+    "title": "OpenAI Daybreak Red expands GPT-5.6 Cyber access to AWS GovCloud US-East",
+    "summary": "Approved government defenders can access GPT-5.6 Cyber via Amazon Bedrock in AWS GovCloud US-East for authorized vulnerability analysis and mitigation. Approval and AWS provisioning are required.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "AWS GovCloud hosted inference; no self-hosted weights announced.",
+    "best_use_cases": [
+      "Authorized vulnerability assessment",
+      "Government defensive security workflows"
+    ],
+    "worth_testing": false,
+    "importance": "Interesting but Minor",
+    "confidence": "High: official availability announcement; access restricted",
+    "tags": [
+      "OpenAI",
+      "Daybreak Red",
+      "AWS GovCloud",
+      "cybersecurity"
+    ],
+    "sources": [
+      "https://openai.com/index/daybreak-red-aws-govcloud/"
+    ],
+    "discovered_via": "OpenAI official announcement"
+  },
+  {
     "id": "2026-11-03-openai-eval-production-safety-gap",
     "published_at": "2026-11-03",
     "company": "OpenAI",
@@ -66,6 +167,40 @@
       "https://openai.com/index/accelerating-engineering-for-the-physical-world/"
     ],
     "discovered_via": "Official OpenAI research"
+  },
+  {
+    "id": "2026-11-03-ollama-0-40-14",
+    "published_at": "2026-11-03",
+    "company": "Ollama",
+    "category": "Local Inference Runtime",
+    "title": "Ollama v0.40.14 fixes sampler defaults and API compatibility",
+    "summary": "Stable Ollama v0.40.14 preserves packaged sampling defaults on OpenAI-compatible endpoints, improves Responses API handling and cloud web-search decoding, and speeds MLX top-k sampling for large vocabularies.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Existing Ollama-supported Mac, Linux and Windows systems; MLX speed change applies to Apple Silicon.",
+    "best_use_cases": [
+      "Reliable local OpenAI-compatible inference",
+      "Claude Code and Codex integrations",
+      "MLX inference"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High: official stable release notes; speed gain not independently quantified",
+    "tags": [
+      "Ollama",
+      "runtime",
+      "local inference",
+      "MLX",
+      "API compatibility"
+    ],
+    "sources": [
+      "https://github.com/ollama/ollama/releases/tag/v0.40.14"
+    ],
+    "discovered_via": "Official Ollama GitHub release"
   },
   {
     "id": "2026-11-02-openai-lifeval-benchmark",
