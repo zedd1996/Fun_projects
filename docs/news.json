@@ -1,5 +1,77 @@
 [
   {
+    "id": "2026-11-05-openai-gpt-6-cyber",
+    "published_at": "2026-11-05",
+    "company": "OpenAI",
+    "category": "Cybersecurity Model",
+    "title": "OpenAI launches GPT-6 Cyber for approved defensive security researchers",
+    "summary": "Cyber-specialized GPT-6 Astra variant launches in restricted Daybreak Red API/Codex access. OpenAI reports 48.5% ExploitGym success versus 32.1% for GPT-5.6 Cyber, with stronger authorized-scope controls; independent replication is limited.",
+    "model_name": "GPT-6 Cyber",
+    "model_type": "Hosted cybersecurity-specialized reasoning model",
+    "input_output": "Text, code and tool context to security analysis, code, and tool actions",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "OpenAI-hosted API/Codex; restricted Daybreak Red access, no local GPU or downloadable weights.",
+    "best_use_cases": [
+      "Authorized vulnerability discovery",
+      "Defensive security validation",
+      "Patch development",
+      "Security code review"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on launch/access; medium on vendor-reported benchmarks and safety performance",
+    "tags": [
+      "OpenAI",
+      "GPT-6",
+      "cybersecurity",
+      "API",
+      "Codex",
+      "Daybreak"
+    ],
+    "sources": [
+      "https://openai.com/index/introducing-gpt-6-cyber/",
+      "https://deploymentsafety.openai.com/gpt-6-cyber"
+    ],
+    "discovered_via": "OpenAI primary announcement"
+  },
+  {
+    "id": "2026-11-05-google-gemini-omni-1-2-flash",
+    "published_at": "2026-11-05",
+    "company": "Google DeepMind",
+    "category": "Video Generation",
+    "title": "Gemini Omni 1.2 Flash launches with 15-second video and conversational editing",
+    "summary": "Google releases Omni 1.2 Flash for 3–15-second video generation, reference-guided consistency and iterative edits; 720p pricing drops to $0.07/second and the model becomes generally available via Gemini API and business products.",
+    "model_name": "Gemini Omni 1.2 Flash",
+    "model_type": "Hosted multimodal video and audio generation",
+    "input_output": "Text, image, video and audio references to generated video with audio",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted Gemini API and Cloud; no local GPU required.",
+    "best_use_cases": [
+      "Short marketing videos",
+      "Product demonstrations",
+      "Reference-guided video",
+      "Iterative social ad variations"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on availability, price and features; medium on publisher-reported consistency improvements",
+    "tags": [
+      "Google",
+      "Gemini",
+      "video",
+      "API",
+      "Omni"
+    ],
+    "sources": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+    ],
+    "discovered_via": "Google primary announcement"
+  },
+  {
     "id": "2026-11-04-openai-images-2-6",
     "published_at": "2026-11-04",
     "company": "OpenAI",
@@ -99,6 +171,41 @@
       "https://openai.com/index/daybreak-red-aws-govcloud/"
     ],
     "discovered_via": "OpenAI official announcement"
+  },
+  {
+    "id": "2026-11-04-openai-linux-kernel-vulnerability-pipeline",
+    "published_at": "2026-11-04",
+    "company": "OpenAI",
+    "category": "Security Research",
+    "title": "OpenAI reports autonomous Linux kernel vulnerability validation and patching pipeline",
+    "summary": "OpenAI's controlled research pipeline reproduced 1,724 Linux kernel vulnerabilities and produced 948 working local privilege-escalation exploits with candidate patches, at about $1.21M in API credits. Human researchers reviewed and reported findings; not all patches are merged.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Hosted frontier model with isolated Linux test VMs; large research compute budget (~$1.21M API credits).",
+    "best_use_cases": [
+      "Defensive vulnerability triage",
+      "Security testing pipelines",
+      "Patch candidate generation",
+      "Reproducible bug validation"
+    ],
+    "worth_testing": false,
+    "importance": "Important",
+    "confidence": "High on documented methodology; independent verification and downstream patch status remain incomplete",
+    "tags": [
+      "OpenAI",
+      "Linux",
+      "security research",
+      "agents",
+      "patching"
+    ],
+    "sources": [
+      "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+    ],
+    "discovered_via": "OpenAI research publication"
   },
   {
     "id": "2026-11-03-openai-eval-production-safety-gap",
