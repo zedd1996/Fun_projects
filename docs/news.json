@@ -208,6 +208,42 @@
     "discovered_via": "OpenAI research publication"
   },
   {
+    "id": "2026-11-04-moonshot-kimi-k3-1-pro-open-weights",
+    "published_at": "2026-11-04",
+    "company": "Moonshot AI",
+    "category": "Open-weight Model",
+    "title": "Moonshot publishes Kimi K3.1 Pro open weights",
+    "summary": "Moonshot makes the 2.8T-total/104B-active multimodal Kimi K3.1 Pro checkpoint downloadable, with a 1M-token configured context and MXFP4/MXFP8 quantization. Self-hosting requires datacenter-scale multi-GPU memory; not a <=12B model.",
+    "model_name": "Kimi K3.1 Pro",
+    "model_type": "Multimodal mixture-of-experts agentic model",
+    "input_output": "Text and images to text, code and tool actions",
+    "total_parameters_b": 2800,
+    "active_parameters_b": 104,
+    "local": true,
+    "hardware": "~1.56 TB published repository; datacenter-class multi-GPU inference and storage, not consumer laptop hardware.",
+    "best_use_cases": [
+      "Large-scale coding agents",
+      "Long-context document analysis",
+      "Visual reasoning",
+      "Enterprise agent research"
+    ],
+    "worth_testing": false,
+    "importance": "Important",
+    "confidence": "High on official checkpoint and model specifications; medium on Nov 4 weight-publication date and publisher performance claims",
+    "tags": [
+      "Moonshot",
+      "Kimi",
+      "open-weights",
+      "MoE",
+      "multimodal",
+      "large-model"
+    ],
+    "sources": [
+      "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    ],
+    "discovered_via": "Official Hugging Face model repository and release-index cross-check"
+  },
+  {
     "id": "2026-11-03-openai-eval-production-safety-gap",
     "published_at": "2026-11-03",
     "company": "OpenAI",
@@ -341,6 +377,42 @@
       "https://openai.com/index/lifeval/"
     ],
     "discovered_via": "Official OpenAI research"
+  },
+  {
+    "id": "2026-11-02-vllm-0-33-0",
+    "published_at": "2026-11-02",
+    "company": "vLLM",
+    "category": "Inference Runtime",
+    "title": "vLLM 0.33.0 expands model support and switches default CUDA artifacts to 13.0",
+    "summary": "Stable vLLM 0.33.0 adds model support including Dory1.0-4B, MiniCPM-OCR 1.0 and LFM2.5-Embedding-350M, plus speculative decoding and serving improvements. CUDA 12.9 release wheels/images are dropped in favor of CUDA 13.0.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "NVIDIA CUDA 13.0 for default GPU wheels/images; separate ROCm, CPU and Intel XPU artifacts; verify driver and PyTorch compatibility before upgrading.",
+    "best_use_cases": [
+      "Production GPU inference serving",
+      "New small-model deployment",
+      "High-throughput agent serving",
+      "Speculative decoding"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on official stable release notes; benchmark gains are workload-dependent; release page had a tag metadata mismatch",
+    "tags": [
+      "vLLM",
+      "runtime",
+      "CUDA",
+      "open-weight",
+      "serving"
+    ],
+    "sources": [
+      "https://github.com/vllm-project/vllm/releases",
+      "https://github.com/vllm-project/vllm/releases/tag/v0.33.0"
+    ],
+    "discovered_via": "Official vLLM release notes"
   },
   {
     "id": "2026-10-30-microsoft-mage-vl-cowork",
