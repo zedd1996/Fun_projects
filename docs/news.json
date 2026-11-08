@@ -1,5 +1,42 @@
 [
   {
+    "id": "2026-11-06-kakao-kanana-2-v-decide-3b-2611",
+    "published_at": "2026-11-06",
+    "company": "Kakao",
+    "category": "Small Open-Weight Decision Model",
+    "title": "Kakao releases Kanana-2-v-decide, a 3.67B multimodal decision model",
+    "summary": "Open weights for a 3.67B vision-language decision model that returns probabilities for choices, yes/no and ratings instead of generating prose. Kakao reports strong Decision Index results; independent replication is limited.",
+    "model_name": "Kanana-2-v-decide-3b-2611",
+    "model_type": "Multimodal decision model",
+    "input_output": "Text, JSON, chat history and up to 10 images → structured choice, binary and rating probabilities",
+    "total_parameters_b": 3.67,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "BF16 weights approximately 7.34GB before runtime overhead; CUDA GPU and custom Transformers code documented. Around 12–16GB available VRAM is a sensible initial experiment, not a verified minimum.",
+    "best_use_cases": [
+      "Multimodal classification",
+      "Customer-support routing",
+      "Address and document verification",
+      "Korean-language decisions"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on release, parameter count and supported inputs; medium-low on developer-reported benchmark comparisons",
+    "tags": [
+      "Kakao",
+      "Hugging Face",
+      "small model",
+      "3.67B",
+      "decision model",
+      "vision",
+      "local"
+    ],
+    "sources": [
+      "https://huggingface.co/kakaocorp/kanana-2-v-decide-3b-2611"
+    ],
+    "discovered_via": "Hugging Face model release monitoring"
+  },
+  {
     "id": "2026-11-05-openai-gpt-6-cyber",
     "published_at": "2026-11-05",
     "company": "OpenAI",
@@ -70,6 +107,42 @@
       "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
     ],
     "discovered_via": "Google primary announcement"
+  },
+  {
+    "id": "2026-11-05-thinking-machines-inkling-2-small",
+    "published_at": "2026-11-05",
+    "company": "Thinking Machines Lab",
+    "category": "Hosted Frontier Model",
+    "title": "Thinking Machines launches Inkling 2 Small with 594B total parameters",
+    "summary": "Thinking Machines introduced a multimodal 594B-total/17B-active MoE for coding, visual reasoning and fine-tuning through Tinker. Weights are not yet public; an Apache-2.0 release is planned after safety testing.",
+    "model_name": "Inkling 2 Small",
+    "model_type": "Multimodal mixture-of-experts autoregressive model",
+    "input_output": "Text and images → text and code",
+    "total_parameters_b": 594,
+    "active_parameters_b": 17,
+    "local": false,
+    "hardware": "Hosted Tinker Playground, sampling and fine-tuning; future self-hosting would require substantial multi-GPU infrastructure.",
+    "best_use_cases": [
+      "Coding agents",
+      "Visual web development",
+      "Fine-tuning experiments",
+      "Multimodal reasoning"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on official announcement and specifications; medium on vendor benchmarks and future weight-release timeline",
+    "tags": [
+      "Thinking Machines Lab",
+      "Inkling",
+      "MoE",
+      "frontier",
+      "Tinker"
+    ],
+    "sources": [
+      "https://thinkingmachines.ai/news/inkling-2-small/",
+      "https://thinkingmachines.ai/model-card/inkling-2-small/"
+    ],
+    "discovered_via": "Primary-source model release discovery"
   },
   {
     "id": "2026-11-04-openai-images-2-6",
@@ -242,6 +315,43 @@
       "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
     ],
     "discovered_via": "Official Hugging Face model repository and release-index cross-check"
+  },
+  {
+    "id": "2026-11-04-webai-twil-8b",
+    "published_at": "2026-11-04",
+    "company": "webAI",
+    "category": "Small Open-Weight Reasoning Model",
+    "title": "webAI releases TwIL-8B reasoning model with local GGUF variants",
+    "summary": "Granite-4.2-derived 8.79B model specialized for math, coding and instruction following, with balanced and verbose reasoning variants and a 4.98GiB Q4 GGUF. Benchmark comparisons are publisher-run; license is non-commercial.",
+    "model_name": "TwIL-8B",
+    "model_type": "Dense reasoning language model",
+    "input_output": "English text → reasoning text, code and answers",
+    "total_parameters_b": 8.79159296,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "16.38GiB BF16 weights or approximately 4.98GiB Q4_K_M GGUF; 8–12GB available memory for modest-context quantized testing, more for long contexts.",
+    "best_use_cases": [
+      "Local math reasoning",
+      "Coding exercises",
+      "Instruction following",
+      "Comparing reasoning-token efficiency"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on released weights, size and quantization; medium-low on comparative benchmarks and precise release date",
+    "tags": [
+      "webAI",
+      "TwIL",
+      "8B",
+      "local",
+      "GGUF",
+      "reasoning",
+      "non-commercial"
+    ],
+    "sources": [
+      "https://huggingface.co/webAI-Official/TwIL-8B"
+    ],
+    "discovered_via": "Hugging Face release tracker; original publication date cross-checked with release listings"
   },
   {
     "id": "2026-11-03-openai-eval-production-safety-gap",
