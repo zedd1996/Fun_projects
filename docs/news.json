@@ -145,6 +145,46 @@
     "discovered_via": "Primary-source model release discovery"
   },
   {
+    "id": "2026-11-05-ollama-v0-40-15-mimo-autotrust",
+    "published_at": "2026-11-05",
+    "company": "Ollama",
+    "category": "Local Inference Runtime",
+    "title": "Ollama v0.40.15 adds MiMo V2.6 9B and AutoTrust decision models",
+    "summary": "Stable Ollama v0.40.15 adds one-command local support for Xiaomi's 9B MiMo V2.6 coding/agent model and AutoTrust decision models on Apple Silicon, plus improved concurrent serving and agent integrations. MiMo's underlying weights predate this runtime release.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "MiMo V2.6 9B Ollama package is 6.6–8.7GB; allow additional RAM/VRAM for runtime and context, with roughly 12–16GB system memory a practical starting point. AutoTrust support in this release is specified for Apple Silicon.",
+    "best_use_cases": [
+      "Local coding and tool-using agents",
+      "Visual coding from screenshots",
+      "Structured classification and decision scoring",
+      "Concurrent local model serving"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on stable release and supported models; medium on hardware suitability and vendor-reported MiMo benchmark gains. GitHub release timestamps conflict; 2026-11-05 is release creation date.",
+    "tags": [
+      "Ollama",
+      "runtime",
+      "local inference",
+      "MiMo V2.6",
+      "9B",
+      "AutoTrust",
+      "Apple Silicon",
+      "agents"
+    ],
+    "sources": [
+      "https://github.com/ollama/ollama/releases/tag/v0.40.15",
+      "https://ollama.com/library/mimo-v2.6",
+      "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B"
+    ],
+    "discovered_via": "Official Ollama GitHub release and model library"
+  },
+  {
     "id": "2026-11-04-openai-images-2-6",
     "published_at": "2026-11-04",
     "company": "OpenAI",
