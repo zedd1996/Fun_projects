@@ -1,5 +1,43 @@
 [
   {
+    "id": "2026-11-09-anthropic-claude-fable-mythos-5-2",
+    "published_at": "2026-11-09",
+    "company": "Anthropic",
+    "category": "Frontier Model Release",
+    "title": "Anthropic launches Claude Fable 5.2 and restricted Mythos 5.2",
+    "summary": "Anthropic releases two access configurations of the same upgraded frontier model: Fable 5.2 broadly available with cyber/biology safeguards and Mythos 5.2 for verified researchers. Vendor reports up to 30% faster generation; API pricing starts at $8 input/$40 output per million tokens.",
+    "model_name": "Claude Fable 5.2 / Claude Mythos 5.2",
+    "model_type": "Hosted frontier multimodal reasoning model",
+    "input_output": "Text and images to text, code, and tool-use outputs",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Anthropic and cloud-hosted inference; no published weights or local GPU deployment. Optional fast mode costs $16 input/$80 output per million tokens.",
+    "best_use_cases": [
+      "Complex software engineering",
+      "Long-running coding agents",
+      "Scientific and technical reasoning",
+      "Verified defensive cybersecurity and life sciences research"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on release, pricing and access; medium on publisher-reported speed and technical achievements; no independently verified comparative performance established",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Fable 5.2",
+      "Mythos 5.2",
+      "frontier",
+      "coding",
+      "agents",
+      "hosted"
+    ],
+    "sources": [
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    ],
+    "discovered_via": "Anthropic official model announcements"
+  },
+  {
     "id": "2026-11-06-kakao-kanana-2-v-decide-3b-2611",
     "published_at": "2026-11-06",
     "company": "Kakao",
@@ -183,6 +221,42 @@
       "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B"
     ],
     "discovered_via": "Official Ollama GitHub release and model library"
+  },
+  {
+    "id": "2026-11-05-huggingface-lerobot-0-7-0",
+    "published_at": "2026-11-05",
+    "company": "Hugging Face",
+    "category": "Robotics Open-Source Runtime",
+    "title": "LeRobot v0.7.0 adds language-guided robot workflows and streaming large datasets",
+    "summary": "LeRobot v0.7.0 adds language-in-the-loop robot control, remote vision-language planning, disk-less streaming of large robotics datasets, and scaled training support. Useful for robotics developers; not a new foundation model.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Local robot and workstation workflows are supported; model-specific GPU needs vary. Remote inference allows lightweight robots to use hosted larger models; distributed training needs accelerator infrastructure.",
+    "best_use_cases": [
+      "Robot policy training",
+      "Language-guided manipulation",
+      "Large robotics dataset streaming",
+      "Robot simulation and evaluation"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on release and documented features; practical gains depend on robotics setup",
+    "tags": [
+      "Hugging Face",
+      "LeRobot",
+      "robotics",
+      "open source",
+      "datasets",
+      "VLA"
+    ],
+    "sources": [
+      "https://huggingface.co/blog/lerobot/lerobot-release-v070"
+    ],
+    "discovered_via": "Hugging Face official LeRobot release blog"
   },
   {
     "id": "2026-11-04-openai-images-2-6",
