@@ -1,5 +1,43 @@
 [
   {
+    "id": "2026-11-10-google-gemini-4-carbon-broad-availability",
+    "published_at": "2026-11-10",
+    "company": "Google DeepMind",
+    "category": "Frontier Model Availability",
+    "title": "Gemini 4 Carbon expands from restricted preview to developer and consumer access",
+    "summary": "Google opens Gemini 4 Carbon to paid-tier API developers, enterprises and consumers after an earlier restricted cybersecurity release. Targets long-running coding, security and scientific agents; performance comparisons are vendor-reported.",
+    "model_name": "Gemini 4 Carbon",
+    "model_type": "Hosted frontier multimodal reasoning model",
+    "input_output": "Text and multimodal inputs to text, code and agent/tool actions",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted API and products; no downloadable weights or local GPU requirements.",
+    "best_use_cases": [
+      "Long-horizon coding agents",
+      "Complex debugging",
+      "Authorized defensive cybersecurity",
+      "Scientific reasoning"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on November 10 access expansion; medium on publisher performance comparisons",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Carbon",
+      "API",
+      "agents",
+      "frontier",
+      "hosted"
+    ],
+    "sources": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-4-carbon-developers/"
+    ],
+    "discovered_via": "Google official announcements"
+  },
+  {
     "id": "2026-11-09-anthropic-claude-fable-mythos-5-2",
     "published_at": "2026-11-09",
     "company": "Anthropic",
@@ -36,6 +74,42 @@
       "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     ],
     "discovered_via": "Anthropic official model announcements"
+  },
+  {
+    "id": "2026-11-09-ollama-v0-40-16",
+    "published_at": "2026-11-09",
+    "company": "Ollama",
+    "category": "Local Inference Runtime",
+    "title": "Ollama v0.40.16 cuts Qwen3.8 Flash Next Apple Silicon memory by about 27 GiB",
+    "summary": "Stable Ollama v0.40.16 reports about 27 GiB lower memory use for Qwen3.8 Flash Next on Apple Silicon, corrects Responses API truncation behavior and improves Claude Code model routing. Includes Ripple Preview support (65B, not a small model).",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Apple Silicon memory savings are model-specific; existing Ollama-supported hardware for other fixes. Test memory use on your machine.",
+    "best_use_cases": [
+      "Apple Silicon local inference",
+      "OpenAI-compatible Responses API",
+      "Claude Code integrations",
+      "Local agent serving"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on official stable release notes; 27 GiB reduction is developer-reported and hardware/model-specific",
+    "tags": [
+      "Ollama",
+      "local inference",
+      "Apple Silicon",
+      "memory",
+      "API compatibility",
+      "Qwen3.8"
+    ],
+    "sources": [
+      "https://github.com/ollama/ollama/releases/tag/v0.40.16"
+    ],
+    "discovered_via": "Official Ollama GitHub releases"
   },
   {
     "id": "2026-11-06-kakao-kanana-2-v-decide-3b-2611",
