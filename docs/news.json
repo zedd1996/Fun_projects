@@ -1,5 +1,44 @@
 [
   {
+    "id": "2026-11-11-google-gemini-decision-1-api",
+    "published_at": "2026-11-11",
+    "company": "Google DeepMind",
+    "category": "Decision Model API",
+    "title": "Google launches Gemini Decision 1 and multimodal Decisions API",
+    "summary": "New Gemini Decision 1 API scores up to 1,000 yes/no, choice and rubric questions against shared multimodal input without token-by-token generation. Google reports 150–250 ms end-to-end latency and $0.10 per million input tokens; independent performance validation is limited.",
+    "model_name": "Gemini Decision 1",
+    "model_type": "Hosted multimodal closed-set decision model",
+    "input_output": "Text, images, audio, video and PDFs → probabilities, selected choices and rubric scores",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted Gemini API; no downloadable weights or local GPU. Supports up to 256K input tokens, with latency figures reported for up to 16K contexts.",
+    "best_use_cases": [
+      "Agent and tool routing",
+      "Policy and content classification",
+      "Multimodal document triage",
+      "Rubric grading",
+      "Human-review prioritization"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on November 11 launch, API interface and published price; medium-low on Google-reported latency, calibration and benchmark comparisons",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Decision 1",
+      "multimodal",
+      "classification",
+      "API",
+      "agent routing",
+      "probabilities"
+    ],
+    "sources": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+    ],
+    "discovered_via": "Google primary developer announcement"
+  },
+  {
     "id": "2026-11-10-google-gemini-4-carbon-broad-availability",
     "published_at": "2026-11-10",
     "company": "Google DeepMind",
