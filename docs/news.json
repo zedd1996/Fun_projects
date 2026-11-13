@@ -1,5 +1,88 @@
 [
   {
+    "id": "2026-11-12-google-gemini-4-hydrogen",
+    "published_at": "2026-11-12",
+    "company": "Google DeepMind",
+    "category": "Hosted Model Release",
+    "title": "Google launches Gemini 4 Hydrogen for fast coding and agent workflows",
+    "summary": "Google released Gemini 4 Hydrogen across Gemini API, AI Studio, Search and the Gemini app, with 1M-token context, four thinking levels and flat API pricing of $1.50/M input and $7.50/M output tokens. Google-reported agent benchmarks need independent replication.",
+    "model_name": "Gemini 4 Hydrogen",
+    "model_type": "Hosted multimodal reasoning and agentic model",
+    "input_output": "Text, images, audio and video → text, code and tool actions",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted inference; no downloadable weights or local GPU needed. 1M-token context; 64K synchronous output default.",
+    "best_use_cases": [
+      "Everyday coding and debugging",
+      "Fast agent workers and verification",
+      "Multimodal document workflows",
+      "Cost-sensitive long-context API tasks"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on launch, availability, API pricing and model card; medium on Google-reported benchmark and safety comparisons",
+    "tags": [
+      "Google",
+      "Gemini 4",
+      "Hydrogen",
+      "Hosted",
+      "Agent",
+      "Coding",
+      "Multimodal"
+    ],
+    "sources": [
+      {
+        "name": "Google launch announcement",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+      },
+      {
+        "name": "Google DeepMind model card",
+        "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/"
+      }
+    ],
+    "discovered_via": "Official Google announcement and model card"
+  },
+  {
+    "id": "2026-11-12-openai-persistent-agent-security",
+    "published_at": "2026-11-12",
+    "company": "OpenAI",
+    "category": "Agent Security",
+    "title": "OpenAI publishes hardened deployment architecture for persistent OpenClaw agents",
+    "summary": "OpenAI describes separating trusted gateways from untrusted agent execution, restricting network/files/secrets, enforcing auto-review, giving agents distinct identities and auditing actions. The company says over 500 agents run proactively internally; no independent effectiveness evaluation supplied.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Security architecture uses isolated containers or Codex Linux sandbox, managed network proxy and credential broker; no new model or specified GPU requirement.",
+    "best_use_cases": [
+      "Secure persistent coding agents",
+      "Credential and permission isolation",
+      "Human-review escalation",
+      "Auditable long-running automation"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on published controls and configurations; internal deployment and effectiveness claims are vendor-reported",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "OpenClaw",
+      "Security",
+      "Persistent Agents",
+      "Sandbox"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI developer security engineering article",
+        "url": "https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai"
+      }
+    ],
+    "discovered_via": "OpenAI official developer blog"
+  },
+  {
     "id": "2026-11-11-google-gemini-decision-1-api",
     "published_at": "2026-11-11",
     "company": "Google DeepMind",
