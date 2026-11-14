@@ -1,5 +1,89 @@
 [
   {
+    "id": "2026-11-13-ggml-llama-cpp-v1-0-0",
+    "published_at": "2026-11-13",
+    "company": "ggml-org",
+    "category": "Local Inference Runtime",
+    "title": "llama.cpp v1.0.0 stabilizes public library versioning and expands local multimodal serving",
+    "summary": "llama.cpp and ggml reach v1.0.0 with explicit major-version API/ABI compatibility rules, removal of deprecated C functions, FP8 KV caches, MoE expert CPU caching, new vision/TTS support and llama-server security fixes. Developers must review breaking API changes before upgrading.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Cross-platform CPU and GPU inference; exact memory depends on selected model, quantization, KV cache and backend.",
+    "best_use_cases": [
+      "Private local multimodal inference",
+      "Embedding local models in applications",
+      "Memory-constrained MoE inference",
+      "OpenAI-compatible local speech endpoint"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High: official ggml-org release notes and maintainer article; performance improvements are hardware/model-dependent.",
+    "tags": [
+      "llama.cpp",
+      "ggml",
+      "local inference",
+      "runtime",
+      "v1.0.0",
+      "FP8",
+      "MoE",
+      "TTS"
+    ],
+    "sources": [
+      {
+        "name": "ggml-org official release",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0"
+      },
+      {
+        "name": "ggml-org maintainer announcement",
+        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+      }
+    ],
+    "discovered_via": "Official ggml-org GitHub release and Hugging Face maintainer article"
+  },
+  {
+    "id": "2026-11-13-openai-chatgpt-wallet",
+    "published_at": "2026-11-13",
+    "company": "OpenAI",
+    "category": "Agent Product",
+    "title": "OpenAI introduces ChatGPT Wallet for user-approved agent purchases",
+    "summary": "ChatGPT Wallet begins a limited US rollout through dots for eligible adult ChatGPT Pro subscribers. Users approve each transaction with a security check; payment tokens keep actual card details away from agents and merchants. Merchant guidance covers signed bot requests, product feeds and payment-risk compatibility.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted ChatGPT/dots payment service; no local GPU or downloadable model.",
+    "best_use_cases": [
+      "User-approved purchases by personal agents",
+      "Merchant agent-commerce readiness",
+      "Tokenized payment authorization"
+    ],
+    "worth_testing": false,
+    "importance": "Important",
+    "confidence": "High on announcement and stated rollout; limited real-world adoption and security performance evidence.",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "Wallet",
+      "dots",
+      "agentic commerce",
+      "payments",
+      "security"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI product announcement",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+      }
+    ],
+    "discovered_via": "OpenAI official news page"
+  },
+  {
     "id": "2026-11-12-google-gemini-4-hydrogen",
     "published_at": "2026-11-12",
     "company": "Google DeepMind",
