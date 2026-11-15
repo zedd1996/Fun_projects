@@ -167,6 +167,46 @@
     "discovered_via": "OpenAI official developer blog"
   },
   {
+    "id": "2026-11-12-salesforce-sov-transcribe-1",
+    "published_at": "2026-11-12",
+    "company": "Salesforce",
+    "category": "Open-Weight Speech Model",
+    "title": "Salesforce releases SOV-Transcribe-1 for robust speech recognition",
+    "summary": "Salesforce released Apache-2.0 open weights for a 26B-total/4B-active non-streaming speech recognition model emphasizing accents, noise, email and phone-number accuracy, style steering and domain-specific vocabulary. Its reported benchmark lead requires workload-specific validation.",
+    "model_name": "SOV-Transcribe-1",
+    "model_type": "Mixture-of-experts speech recognition model",
+    "input_output": "Audio and transcription instructions → text transcripts",
+    "total_parameters_b": 26,
+    "active_parameters_b": 4,
+    "local": true,
+    "hardware": "Open-weight 26B total parameters; memory depends on precision, quantization and runtime. High-memory GPU or offloading likely needed; no verified minimum established.",
+    "best_use_cases": [
+      "Call center transcription",
+      "Dictated emails and phone numbers",
+      "Noisy or accented speech recognition",
+      "Domain-specific transcription"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on model release, 26B total and 4B active from Salesforce; benchmark rankings are publisher-reported with referenced external leaderboard and require replication.",
+    "tags": [
+      "Salesforce",
+      "ASR",
+      "Speech",
+      "MoE",
+      "Open Weights",
+      "26B total",
+      "Not ≤12B"
+    ],
+    "sources": [
+      {
+        "name": "Salesforce official developer announcement",
+        "url": "https://huggingface.co/blog/salesforce-sovereign-intelligence/sov-transcribe-1"
+      }
+    ],
+    "discovered_via": "Hugging Face community article by Salesforce team; verified against publisher primary announcement"
+  },
+  {
     "id": "2026-11-11-google-gemini-decision-1-api",
     "published_at": "2026-11-11",
     "company": "Google DeepMind",
@@ -204,6 +244,56 @@
       "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
     ],
     "discovered_via": "Google primary developer announcement"
+  },
+  {
+    "id": "2026-11-11-zyphra-zonos3-mini",
+    "published_at": "2026-11-11",
+    "company": "Zyphra",
+    "category": "Open-Weight Speech Model",
+    "title": "Zyphra ZONOS3-Mini brings local multilingual voice cloning to sub-1B models",
+    "summary": "Zyphra released Apache-2.0 ZONOS3-Mini for 43-language speech synthesis and zero-shot voice cloning, with an 800M-parameter MoE backbone (100M active) and roughly 886M parameters in the full model per its technical report. Includes GGUF, MLX, C++/ggml and WebGPU inference.",
+    "model_name": "ZONOS3-Mini",
+    "model_type": "Multilingual text-to-speech latent mixture-of-experts model",
+    "input_output": "Text plus optional reference voice → 44.1kHz speech audio",
+    "total_parameters_b": 0.886,
+    "active_parameters_b": 0.1,
+    "local": true,
+    "hardware": "On-device via browser WebGPU, Apple Silicon MLX, CPU/CUDA/Metal/Vulkan ggml; practical performance depends on device. Publisher reports sub-570ms first audio on Pixel 9 and sub-150ms on M3 MacBook Air.",
+    "best_use_cases": [
+      "Private offline speech synthesis",
+      "Multilingual voice assistants",
+      "Consented voice cloning",
+      "Game narration and character voices"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on open weights, 43 languages and total-vs-active sizes; publisher speed and quality claims are not independently reproduced.",
+    "tags": [
+      "Zyphra",
+      "ZONOS3",
+      "TTS",
+      "Voice Cloning",
+      "≤12B",
+      "Local",
+      "WebGPU",
+      "MLX",
+      "GGUF"
+    ],
+    "sources": [
+      {
+        "name": "Zyphra official launch article",
+        "url": "https://huggingface.co/blog/Zyphra/zonos3-mini"
+      },
+      {
+        "name": "Zyphra official model card",
+        "url": "https://huggingface.co/Zyphra/ZONOS3-Mini"
+      },
+      {
+        "name": "ZONOS3-Mini technical report",
+        "url": "https://huggingface.co/papers/2611.16525"
+      }
+    ],
+    "discovered_via": "Hugging Face community model discovery; verified against Zyphra primary model card, release article and technical report"
   },
   {
     "id": "2026-11-10-google-gemini-4-carbon-broad-availability",
