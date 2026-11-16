@@ -1,5 +1,48 @@
 [
   {
+    "id": "2026-11-15-alibaba-qwen4-max",
+    "published_at": "2026-11-15",
+    "company": "Alibaba Cloud / Qwen",
+    "category": "Hosted Model Release",
+    "title": "Alibaba launches Qwen4-Max flagship multimodal model",
+    "summary": "Alibaba's Qwen4-Max is documented for hosted text, image and video understanding, deep reasoning, structured outputs and parallel tool calling, with a 1M-token context window and OpenAI/Anthropic-compatible API protocols. It follows a separate Token Plan-only preview introduced Nov 11; model weights and parameter count are not disclosed.",
+    "model_name": "Qwen4-Max",
+    "model_type": "Hosted multimodal reasoning model",
+    "input_output": "Text, image and video → text, code and tool calls",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Alibaba Cloud Model Studio hosted inference; no public weights or local GPU option. Regional API availability varies.",
+    "best_use_cases": [
+      "Complex coding and agents",
+      "Long-document analysis",
+      "Multimodal business workflows",
+      "Structured tool calling"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on official documentation and Reuters report of Nov 15 announcement; independent quality and safety evidence limited.",
+    "tags": [
+      "Qwen4",
+      "Alibaba",
+      "hosted",
+      "multimodal",
+      "agents",
+      "1M context"
+    ],
+    "sources": [
+      {
+        "name": "Alibaba Cloud Qwen4-Max documentation",
+        "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max"
+      },
+      {
+        "name": "Reuters November 16 report",
+        "url": "https://www.reuters.com/business/retail-consumer/alibaba-unveils-new-flagship-ai-model-with-safety-upgrades-2026-11-16/"
+      }
+    ],
+    "discovered_via": "Official Alibaba Cloud documentation cross-checked against Reuters reporting"
+  },
+  {
     "id": "2026-11-13-ggml-llama-cpp-v1-0-0",
     "published_at": "2026-11-13",
     "company": "ggml-org",
@@ -443,6 +486,94 @@
       "https://huggingface.co/kakaocorp/kanana-2-v-decide-3b-2611"
     ],
     "discovered_via": "Hugging Face model release monitoring"
+  },
+  {
+    "id": "2026-11-06-nace-drex-v1-5",
+    "published_at": "2026-11-06",
+    "company": "Nace.AI",
+    "category": "Open-Weight Decision Model",
+    "title": "Drex v1.5 brings 9B local probability-based decisions to long documents",
+    "summary": "Drex v1.5 is a 8.95B-parameter open-weight decision model returning option probabilities without free-form text generation. Supports up to 131K context and local inference through its Python server or project-specific llama.cpp/Ollama forks; publisher-run benchmark results need replication.",
+    "model_name": "Drex v1.5",
+    "model_type": "Hybrid-attention decision/classification model",
+    "input_output": "Text or JSON state plus typed questions → option probabilities and scores",
+    "total_parameters_b": 8.95,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "About 18GB BF16 weights or 9.5GB Q8 GGUF; 24GB NVIDIA A10G tested, Apple Silicon tested. Long context needs more memory. Custom runtime fork required.",
+    "best_use_cases": [
+      "Ticket routing",
+      "Address matching",
+      "Document classification",
+      "Tool selection",
+      "Structured decision scoring"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on downloadable weights, parameter count and documented runtime; medium-low on publisher-run comparative benchmarks.",
+    "tags": [
+      "Drex",
+      "Nace",
+      "9B",
+      "local",
+      "decision model",
+      "classification",
+      "GGUF"
+    ],
+    "sources": [
+      {
+        "name": "Nace.AI official Drex v1.5 model card",
+        "url": "https://huggingface.co/nace-ai/drex-v1.5"
+      },
+      {
+        "name": "Drex research paper",
+        "url": "https://huggingface.co/papers/2611.07854"
+      }
+    ],
+    "discovered_via": "Official Hugging Face model card and research paper"
+  },
+  {
+    "id": "2026-11-06-nace-drex-dlm",
+    "published_at": "2026-11-06",
+    "company": "Nace.AI",
+    "category": "Open-Weight Decision Model",
+    "title": "Drex DLM offers 8B diffusion-backed local classification and routing",
+    "summary": "Nace.AI released an 8B diffusion-language-model-based decision checkpoint that scores multiple yes/no, choice or rating questions in one forward pass. Open weights support local inference via Python or dedicated llama.cpp/Ollama forks; license is noncommercial CC BY-NC 4.0.",
+    "model_name": "Drex DLM",
+    "model_type": "Diffusion-backed decision model with pointer head",
+    "input_output": "Text or JSON state and typed questions → probabilities, labels and scores",
+    "total_parameters_b": 8,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Approximately 16GB BF16 weights plus context overhead; validated on Apple M5 Pro/Max and NVIDIA H100; CPU-only untested. Dedicated runtime fork needed.",
+    "best_use_cases": [
+      "Local classification",
+      "Tool routing",
+      "Customer-support triage",
+      "Multi-question structured decisions"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on weights, architecture and noncommercial licensing; publisher-run quality comparisons unreplicated.",
+    "tags": [
+      "Drex",
+      "8B",
+      "diffusion",
+      "decision model",
+      "local",
+      "noncommercial"
+    ],
+    "sources": [
+      {
+        "name": "Nace.AI Drex DLM model card",
+        "url": "https://huggingface.co/nace-ai/drex-dlm"
+      },
+      {
+        "name": "Drex research paper",
+        "url": "https://huggingface.co/papers/2611.07854"
+      }
+    ],
+    "discovered_via": "Official Hugging Face model card and paper"
   },
   {
     "id": "2026-11-05-openai-gpt-6-cyber",
