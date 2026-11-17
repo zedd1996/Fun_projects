@@ -1,5 +1,42 @@
 [
   {
+    "id": "2026-11-16-anthropic-vulnerability-disclosure-timelines",
+    "published_at": "2026-11-16",
+    "company": "Anthropic",
+    "category": "AI Security Policy",
+    "title": "Anthropic shortens coordinated vulnerability disclosure deadlines for AI-assisted findings",
+    "summary": "Anthropic will shorten its coordinated disclosure window from 90 days to 30 days for high/critical vulnerabilities and 45 days for others, effective for reports sent from January 1, 2027. It also accelerates escalation to external coordinators when maintainers do not respond.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": null,
+    "best_use_cases": [
+      "Open-source security response planning",
+      "Vulnerability remediation workflows",
+      "AI-assisted defensive research"
+    ],
+    "worth_testing": false,
+    "importance": "Worth Testing",
+    "confidence": "High: dated first-party policy announcement; operational outcomes not yet independently measured.",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "cybersecurity",
+      "vulnerability disclosure",
+      "open source"
+    ],
+    "sources": [
+      {
+        "name": "Anthropic policy announcement",
+        "url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines"
+      }
+    ],
+    "discovered_via": "Anthropic primary research publication"
+  },
+  {
     "id": "2026-11-15-alibaba-qwen4-max",
     "published_at": "2026-11-15",
     "company": "Alibaba Cloud / Qwen",
@@ -41,6 +78,49 @@
       }
     ],
     "discovered_via": "Official Alibaba Cloud documentation cross-checked against Reuters reporting"
+  },
+  {
+    "id": "2026-11-15-meituan-longcat-video-avatar-1-6",
+    "published_at": "2026-11-15",
+    "company": "Meituan LongCat",
+    "category": "Open-Weight Video Model",
+    "title": "LongCat-Video-Avatar 1.6 releases open weights for audio-driven avatar video",
+    "summary": "Meituan's MIT-licensed avatar-video update improves lip synchronization, facial/body motion and long-video continuity, with official claims of generating over 10-minute clips and faster inference. Weights and runnable multi-GPU examples are published; quality comparisons are developer-run.",
+    "model_name": "LongCat-Video-Avatar-1.6",
+    "model_type": "Audio-conditioned video generation",
+    "input_output": "Audio + image or text → generated talking-avatar video",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "Large 77.6 GB checkpoint repository including optional INT8 base; official examples use two GPU processes with context parallelism. Consumer-GPU minimum not established.",
+    "best_use_cases": [
+      "Talking-avatar videos",
+      "Long-form speech-driven characters",
+      "Multispeaker video production research"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High for weights, license, features and November 15 GitHub release; medium-low for vendor quality and speed claims.",
+    "tags": [
+      "LongCat",
+      "Meituan",
+      "open weights",
+      "avatar",
+      "video",
+      "lip sync",
+      "MIT"
+    ],
+    "sources": [
+      {
+        "name": "Official LongCat model card",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6"
+      },
+      {
+        "name": "Official LongCat-Video repository",
+        "url": "https://github.com/meituan-longcat/LongCat-Video"
+      }
+    ],
+    "discovered_via": "Release discovery cross-checked against official Hugging Face checkpoint and November 15 GitHub commit"
   },
   {
     "id": "2026-11-13-ggml-llama-cpp-v1-0-0",
