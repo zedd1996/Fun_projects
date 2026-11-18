@@ -86,6 +86,172 @@
     "discovered_via": "OpenAI official launch and release notes"
   },
   {
+    "id": "2026-11-17-microsoft-mai-code-2",
+    "published_at": "2026-11-17",
+    "company": "Microsoft AI",
+    "category": "Hosted Model Release",
+    "title": "Microsoft launches MAI Code 2 for cost-efficient repository-scale coding",
+    "summary": "MAI Code 2 is a sparse multimodal MoE with ~2.8T total and 77B active parameters plus 3B embeddings, 1.05M context, and configurable reasoning. Available in GitHub Copilot; Microsoft reports near-GPT-6.1 Sol performance on selected coding benchmarks at promotional pricing.",
+    "model_name": "MAI Code 2",
+    "model_type": "Sparse MoE decoder transformer with integrated vision encoder",
+    "input_output": "Text and images → text and code; agent tools via harness",
+    "total_parameters_b": 2800,
+    "active_parameters_b": 77,
+    "local": false,
+    "hardware": "Hosted GitHub Copilot; no public downloadable weights. Not a consumer-GPU model.",
+    "best_use_cases": [
+      "Multi-file coding",
+      "Repository debugging",
+      "UI implementation",
+      "Test-driven agent workflows"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High for release and model-card technical detail; benchmark cost ratios are workload-dependent, partly promotional and mostly Microsoft-run.",
+    "tags": [
+      "Microsoft",
+      "MAI",
+      "MoE",
+      "coding",
+      "agents",
+      "hosted"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft official launch",
+        "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+      },
+      {
+        "name": "Microsoft model card",
+        "url": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf"
+      }
+    ],
+    "discovered_via": "Microsoft Ignite official announcement and model card"
+  },
+  {
+    "id": "2026-11-17-microsoft-mai-code-2-flash",
+    "published_at": "2026-11-17",
+    "company": "Microsoft AI",
+    "category": "Hosted Model Release",
+    "title": "MAI Code 2 Flash targets low-cost routine coding agents",
+    "summary": "Microsoft's smaller coding model has ~398B total and 12B active parameters, text and vision input, 1.05M context and adjustable reasoning. Available in GitHub Copilot and limited-access Foundry preview; not a ≤12B-total local model.",
+    "model_name": "MAI Code 2 Flash",
+    "model_type": "Sparse MoE decoder transformer with integrated vision encoder",
+    "input_output": "Text and images → text and code; agent tools via harness",
+    "total_parameters_b": 398,
+    "active_parameters_b": 12,
+    "local": false,
+    "hardware": "Hosted GitHub Copilot and restricted Foundry preview; no public weights, unsuitable for consumer GPU memory.",
+    "best_use_cases": [
+      "Targeted edits",
+      "Routine bug fixes",
+      "Code explanations",
+      "High-volume coding agents"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High for release and model-card technical detail; vendor price-performance results require task-specific replication.",
+    "tags": [
+      "Microsoft",
+      "MAI",
+      "MoE",
+      "coding",
+      "Flash",
+      "hosted"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft official launch",
+        "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+      },
+      {
+        "name": "Microsoft model card",
+        "url": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf"
+      }
+    ],
+    "discovered_via": "Microsoft Ignite official announcement and model card"
+  },
+  {
+    "id": "2026-11-17-microsoft-decision-1-1",
+    "published_at": "2026-11-17",
+    "company": "Microsoft",
+    "category": "Hosted Decision Model",
+    "title": "Microsoft Decision 1.1 reaches general availability with visual input",
+    "summary": "The Foundry decision model takes text, JSON or images and returns calibrated scores for supplied choices in one invocation, supporting up to 32K input tokens for routing, classification and verification. It does not generate rationales.",
+    "model_name": "Microsoft-Decision-1.1",
+    "model_type": "Multimodal single-pass decision model; architecture undisclosed",
+    "input_output": "Text, JSON and images → calibrated structured decision scores",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Microsoft Foundry hosted service; no public weights or local GPU needed.",
+    "best_use_cases": [
+      "Entity and address matching",
+      "Classification",
+      "Model and tool routing",
+      "Document verification"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on GA and documented API; Microsoft-reported speed/cost comparisons depend on workload.",
+    "tags": [
+      "Microsoft",
+      "Foundry",
+      "decision model",
+      "classification",
+      "vision",
+      "calibration"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft Ignite launch",
+        "url": "https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/"
+      },
+      {
+        "name": "Microsoft Foundry model documentation",
+        "url": "https://learn.microsoft.com/en-gb/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure?pivots=azure-direct-others"
+      }
+    ],
+    "discovered_via": "Microsoft official Ignite announcement"
+  },
+  {
+    "id": "2026-11-17-microsoft-mai-realtime-1",
+    "published_at": "2026-11-17",
+    "company": "Microsoft AI",
+    "category": "Hosted Speech Model",
+    "title": "MAI Realtime 1 introduces low-cost speech-to-speech voice agents",
+    "summary": "Microsoft introduces an OpenAI Realtime API-compatible voice model with interruption handling, reasoning and tool actions. Base speech is $0.01/audio minute with reasoning billed separately; Labs demo and limited-access Foundry preview are available.",
+    "model_name": "MAI Realtime 1",
+    "model_type": "Realtime speech-to-speech model; architecture undisclosed",
+    "input_output": "Audio and instructions → spoken responses and tool actions",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Hosted Microsoft AI Labs and limited-access Foundry preview; no public weights.",
+    "best_use_cases": [
+      "Contact-center prototypes",
+      "Interactive voice agents",
+      "Tool-assisted speech workflows"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on announcement, pricing terms and preview status; comparative quality and latency are Microsoft evaluations.",
+    "tags": [
+      "Microsoft",
+      "speech",
+      "voice agent",
+      "Realtime",
+      "preview"
+    ],
+    "sources": [
+      {
+        "name": "Microsoft official announcement",
+        "url": "https://microsoft.ai/news/introducing-mai-realtime-1/"
+      }
+    ],
+    "discovered_via": "Microsoft Ignite official launch"
+  },
+  {
     "id": "2026-11-16-anthropic-vulnerability-disclosure-timelines",
     "published_at": "2026-11-16",
     "company": "Anthropic",
@@ -121,6 +287,46 @@
       }
     ],
     "discovered_via": "Anthropic primary research publication"
+  },
+  {
+    "id": "2026-11-16-liquid-ai-d1-2-family",
+    "published_at": "2026-11-16",
+    "company": "Liquid AI",
+    "category": "Hosted Decision Models",
+    "title": "Liquid AI d1.2 and d1.2-ultra add audio and typed extraction",
+    "summary": "Liquid's API-hosted decision models add evidence-linked value extraction, text spans, image bounding boxes, numeric estimates and multi-select classification, plus audio input. Listed input pricing is $0.02/M and $0.042/M tokens respectively.",
+    "model_name": "d1.2 / d1.2-ultra",
+    "model_type": "Omnimodal decision models; architecture and parameter counts undisclosed",
+    "input_output": "Text, images and audio → typed decisions, probabilities, values, spans and boxes",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Liquid API; no public weights for these variants established.",
+    "best_use_cases": [
+      "Invoice field extraction",
+      "PII detection",
+      "Address and entity matching",
+      "Audio classification",
+      "Visual verification"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on release, capabilities and API prices; internal task/calibration results are vendor-reported; external Decision Index cited by vendor.",
+    "tags": [
+      "Liquid AI",
+      "decision models",
+      "multimodal",
+      "OCR",
+      "extraction",
+      "classification"
+    ],
+    "sources": [
+      {
+        "name": "Liquid AI official launch",
+        "url": "https://www.liquid.ai/blog/d1-2"
+      }
+    ],
+    "discovered_via": "Liquid AI official announcement"
   },
   {
     "id": "2026-11-15-alibaba-qwen4-max",
@@ -293,6 +499,48 @@
     "discovered_via": "OpenAI official news page"
   },
   {
+    "id": "2026-11-13-google-antigravity-dynamic-workflows",
+    "published_at": "2026-11-13",
+    "company": "Google",
+    "category": "Agent Developer Tool",
+    "title": "Antigravity adds Python Dynamic Workflows and safer browser-agent controls",
+    "summary": "Antigravity App v2.32.0 supports Python-orchestrated parallel subagents and multi-step workflows, plus stronger browser download and cross-site frame protections. Earlier v2.31.0 added /swarm and explicit download approvals.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": null,
+    "best_use_cases": [
+      "Parallel repository analysis",
+      "Repeatable multi-agent coding workflows",
+      "Browser-based app QA"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High: dated official changelog. Agent reliability and permissions depend on configuration and task.",
+    "tags": [
+      "Google",
+      "Antigravity",
+      "agents",
+      "browser",
+      "Python",
+      "workflow"
+    ],
+    "sources": [
+      {
+        "name": "Google Antigravity official changelog",
+        "url": "https://antigravity.google/docs/changelog"
+      },
+      {
+        "name": "Antigravity browser documentation",
+        "url": "https://antigravity.google/docs/browser"
+      }
+    ],
+    "discovered_via": "Julian Goldie SEO Antigravity videos, independently verified against Google changelog"
+  },
+  {
     "id": "2026-11-12-google-gemini-4-hydrogen",
     "published_at": "2026-11-12",
     "company": "Google DeepMind",
@@ -414,6 +662,94 @@
       }
     ],
     "discovered_via": "Hugging Face community article by Salesforce team; verified against publisher primary announcement"
+  },
+  {
+    "id": "2026-11-12-perplexity-decider-flash-v1-3",
+    "published_at": "2026-11-12",
+    "company": "Perplexity",
+    "category": "Open-Weight Decision Model",
+    "title": "Perplexity Decider Flash v1.3 adds evidence-span extraction to 5B local decisions",
+    "summary": "Qwen3.5-4B-based Apache-2.0 multimodal classifier adds verbatim extraction with character offsets and confidence, alongside scoring and classification. Official checkpoint metadata lists 5B total parameters and ~8.5 GiB BF16 weights; access requires authorization per model card.",
+    "model_name": "pplx-decider-flash-v1.3",
+    "model_type": "Dense Qwen3.5-based multimodal decision model",
+    "input_output": "Text and images → structured decisions, scores and verbatim text spans",
+    "total_parameters_b": 5,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "CUDA BF16 weights ~8.5 GiB plus working memory; 12–16GB VRAM is a starting test target, not a guaranteed minimum; checkpoint access may require a Hugging Face token.",
+    "best_use_cases": [
+      "Local entity matching",
+      "Address classification",
+      "Document evidence extraction",
+      "Reranking",
+      "Workflow routing"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on dated announcement and checkpoint metadata; hardware target is an estimate and independent task-specific evaluation is needed.",
+    "tags": [
+      "Perplexity",
+      "decision model",
+      "5B",
+      "local",
+      "Apache-2.0",
+      "extraction",
+      "classification"
+    ],
+    "sources": [
+      {
+        "name": "Perplexity official launch and evaluations",
+        "url": "https://www.perplexity.ai/en-GB/hub/blog/perplexity-decider"
+      },
+      {
+        "name": "Official Flash model card",
+        "url": "https://huggingface.co/perplexity-ai/pplx-decider-flash-v1.3"
+      }
+    ],
+    "discovered_via": "Perplexity official research and Hugging Face model card"
+  },
+  {
+    "id": "2026-11-12-perplexity-decider-v1-3",
+    "published_at": "2026-11-12",
+    "company": "Perplexity",
+    "category": "Open-Weight Decision Model",
+    "title": "Perplexity Decider v1.3 adds evidence-linked extraction and improved classification",
+    "summary": "The Apache-2.0 Qwen3.8-27B-based decision model adds Locate to extract verbatim spans with offsets and confidence. Hugging Face checkpoint metadata reports 26B parameters; official BF16 serving requires ~49 GiB of weight memory plus overhead.",
+    "model_name": "pplx-decider-v1.3",
+    "model_type": "Dense Qwen3.8-based multimodal decision model",
+    "input_output": "Text and images → structured scores, classifications and evidence spans",
+    "total_parameters_b": 26,
+    "active_parameters_b": null,
+    "local": true,
+    "hardware": "CUDA BF16 weights ~49 GiB plus working memory; not a practical BF16 model for an 8–24GB machine; checkpoint access may require a token.",
+    "best_use_cases": [
+      "High-accuracy classification",
+      "Evidence extraction",
+      "Reranking",
+      "Entity matching"
+    ],
+    "worth_testing": false,
+    "importance": "Worth Testing",
+    "confidence": "High on dated launch, checkpoint metadata and serving instructions; evaluation comparisons are mostly developer-reported.",
+    "tags": [
+      "Perplexity",
+      "decision model",
+      "local",
+      "Apache-2.0",
+      "extraction",
+      "classification"
+    ],
+    "sources": [
+      {
+        "name": "Perplexity official launch and evaluations",
+        "url": "https://www.perplexity.ai/en-GB/hub/blog/perplexity-decider"
+      },
+      {
+        "name": "Official model card",
+        "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.3"
+      }
+    ],
+    "discovered_via": "Perplexity official research and Hugging Face model card"
   },
   {
     "id": "2026-11-11-google-gemini-decision-1-api",
