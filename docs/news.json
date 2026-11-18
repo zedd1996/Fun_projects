@@ -1,5 +1,91 @@
 [
   {
+    "id": "2026-11-17-openai-gpt-6-2-astra",
+    "published_at": "2026-11-17",
+    "company": "OpenAI",
+    "category": "Hosted Model Release",
+    "title": "OpenAI releases GPT-6.2 Astra for complex coding and professional workflows",
+    "summary": "OpenAI launches GPT-6.2 Astra across ChatGPT Work, Codex and API with improved coding, computer use and professional document generation. Standard API pricing is $8/M input, $0.40/M cached input and $40/M output tokens; vendor benchmarks report stronger results at lower per-task cost.",
+    "model_name": "GPT-6.2 Astra",
+    "model_type": "Hosted frontier multimodal reasoning model",
+    "input_output": "Text and images → text, code and tool calls",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "OpenAI-hosted API and ChatGPT Work/Codex; no local model weights or GPU required.",
+    "best_use_cases": [
+      "Complex repository-wide coding",
+      "Professional spreadsheets and slides",
+      "Long-horizon agents",
+      "Scientific and technical research"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High for official release, availability and prices; comparative benchmark claims largely vendor-reported.",
+    "tags": [
+      "OpenAI",
+      "GPT-6.2",
+      "Astra",
+      "coding",
+      "agents",
+      "hosted"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI GPT-6.2 launch",
+        "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+      },
+      {
+        "name": "OpenAI model release notes",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+      }
+    ],
+    "discovered_via": "OpenAI official launch and release notes"
+  },
+  {
+    "id": "2026-11-17-openai-gpt-6-2-sol",
+    "published_at": "2026-11-17",
+    "company": "OpenAI",
+    "category": "Hosted Model Release",
+    "title": "OpenAI releases GPT-6.2 Sol with improved everyday agent and coding efficiency",
+    "summary": "GPT-6.2 Sol launches in ChatGPT Work, Codex and API as a lower-cost companion to Astra, with improved multi-step workflows and coding over GPT-6.1 Sol according to OpenAI. API pricing remains $2/M input, $0.10/M cached input and $10/M output tokens.",
+    "model_name": "GPT-6.2 Sol",
+    "model_type": "Hosted efficient multimodal reasoning model",
+    "input_output": "Text and images → text, code and tool calls",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "OpenAI-hosted API and ChatGPT Work/Codex; no downloadable weights or local GPU required.",
+    "best_use_cases": [
+      "Everyday coding assistants",
+      "Cost-sensitive agent workflows",
+      "Text and image analysis",
+      "Professional writing and automation"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High for official release, availability and pricing; performance comparisons are predominantly vendor-reported.",
+    "tags": [
+      "OpenAI",
+      "GPT-6.2",
+      "Sol",
+      "coding",
+      "agents",
+      "hosted"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI GPT-6.2 launch",
+        "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+      },
+      {
+        "name": "OpenAI model release notes",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+      }
+    ],
+    "discovered_via": "OpenAI official launch and release notes"
+  },
+  {
     "id": "2026-11-16-anthropic-vulnerability-disclosure-timelines",
     "published_at": "2026-11-16",
     "company": "Anthropic",
