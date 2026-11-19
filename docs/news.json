@@ -1,5 +1,124 @@
 [
   {
+    "id": "2026-11-18-google-gemini-4-neon",
+    "published_at": "2026-11-18",
+    "company": "Google DeepMind",
+    "category": "Hosted Model Release",
+    "title": "Gemini 4 Neon launches for coding and multimodal enterprise workflows",
+    "summary": "Google releases Gemini 4 Neon, adapted from Carbon, with up to 1M unified context, text/image/audio/video input, and API, AI Studio, Gemini app and Antigravity access. Google-reported coding and agent scores need workload-specific validation.",
+    "model_name": "Gemini 4 Neon",
+    "model_type": "Hosted multimodal frontier reasoning model adapted from Gemini 4 Carbon",
+    "input_output": "Text, images, audio and video → text, code and tool outputs",
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": false,
+    "hardware": "Google-hosted inference; no downloadable weights or local GPU needed. Access depends on plan and channel.",
+    "best_use_cases": [
+      "Multi-file coding agents",
+      "Long-context document analysis",
+      "Multimodal knowledge work",
+      "Tool-heavy enterprise workflows"
+    ],
+    "worth_testing": true,
+    "importance": "Important",
+    "confidence": "High on official model card, release date and distribution; benchmark comparisons largely Google-reported.",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Neon",
+      "coding",
+      "multimodal",
+      "agents",
+      "hosted"
+    ],
+    "sources": [
+      {
+        "name": "Google DeepMind Gemini 4 Neon model card",
+        "url": "https://deepmind.google/models/model-cards/gemini-4-neon/"
+      },
+      {
+        "name": "Google DeepMind Gemini models",
+        "url": "https://deepmind.google/models/gemini/"
+      }
+    ],
+    "discovered_via": "Google DeepMind official model card and model index"
+  },
+  {
+    "id": "2026-11-18-openai-codex-sandbox-engineering",
+    "published_at": "2026-11-18",
+    "company": "OpenAI",
+    "category": "Agent Runtime / Security",
+    "title": "OpenAI documents Codex sandbox permission boundaries and reusable command isolation",
+    "summary": "OpenAI details Codex filesystem and network permission profiles, cross-platform enforcement, and reusable sandbox tooling for limiting agent command access. Practical guidance for secure local coding agents, not a new model.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Sandbox controls on macOS, Linux and Windows; no dedicated GPU required.",
+    "best_use_cases": [
+      "Safer local coding agents",
+      "Restricting filesystem access",
+      "Limiting network exfiltration",
+      "Sandboxing tool and MCP server commands"
+    ],
+    "worth_testing": true,
+    "importance": "Worth Testing",
+    "confidence": "High on official engineering documentation; security depends on actual configuration and threat model.",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "sandbox",
+      "agent security",
+      "permissions"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI engineering: Inside the Codex sandbox",
+        "url": "https://openai.com/index/inside-the-codex-sandbox/"
+      }
+    ],
+    "discovered_via": "OpenAI official engineering publication"
+  },
+  {
+    "id": "2026-11-18-openai-research-acceleration-jagged-frontier",
+    "published_at": "2026-11-18",
+    "company": "OpenAI",
+    "category": "AI Research / Agents",
+    "title": "OpenAI quantifies uneven progress of autonomous research agents",
+    "summary": "OpenAI reports autonomous completion of 2–4-hour internal research tasks rising from 23% to 46% between March and October, with much weaker results for some inference-serving engineering tasks. Internal evaluations emphasize task-specific testing over generic autonomy claims.",
+    "model_name": null,
+    "model_type": null,
+    "input_output": null,
+    "total_parameters_b": null,
+    "active_parameters_b": null,
+    "local": null,
+    "hardware": "Research report, not a new model or deployable runtime.",
+    "best_use_cases": [
+      "Calibrating agent autonomy expectations",
+      "Designing human review gates",
+      "Selecting agent benchmark tasks"
+    ],
+    "worth_testing": false,
+    "importance": "Interesting but Minor",
+    "confidence": "High on published methodology and figures; results are internal OpenAI measurements and not independently generalizable.",
+    "tags": [
+      "OpenAI",
+      "research",
+      "agents",
+      "evaluation",
+      "autonomy"
+    ],
+    "sources": [
+      {
+        "name": "OpenAI research acceleration report",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier/"
+      }
+    ],
+    "discovered_via": "OpenAI official research publication"
+  },
+  {
     "id": "2026-11-17-openai-gpt-6-2-astra",
     "published_at": "2026-11-17",
     "company": "OpenAI",
